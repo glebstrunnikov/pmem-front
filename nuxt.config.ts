@@ -5,6 +5,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: ["pmem-europa.de"],
+    },
   },
   css: ["~/assets/css/tailwind.css"],
+  devServer: {
+    host: "0.0.0.0",
+    port: 3000,
+  },
 });
