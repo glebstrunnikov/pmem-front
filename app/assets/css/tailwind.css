@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tomato: #ff5733;
+}
+@layer component {
+  .text-title-xl {
+    font-size: 32px;
+    font-weight: 600;
+  }
+}
