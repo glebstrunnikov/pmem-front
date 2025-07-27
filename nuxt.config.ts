@@ -7,11 +7,15 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
     server: {
       allowedHosts: ["pmem-europa.de"],
+      hmr: {
+        host: "pmem-europa.de",
+      },
     },
   },
   css: ["~/assets/css/tailwind.css"],
   devServer: {
     host: "0.0.0.0",
     port: 3000,
+    https: false,
   },
 });
