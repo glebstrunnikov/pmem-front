@@ -2,10 +2,25 @@
 
 @theme {
   --color-tomato: #ff5733;
+
+  --color-background: rgb(208, 201, 181);
+  --color-primary: rgb(76, 71, 76);
+  --color-primary-active: rgb(182, 64, 64);
+
+  --font-sans: "Open Sans", sans-serif;
+  --font-title: "Manrope", sans-serif;
 }
 @layer component {
   .text-title-xl {
-    font-size: 32px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .text-title-m {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .text-title-m {
+    font-size: 21.19px;
     font-weight: 600;
   }
 }
