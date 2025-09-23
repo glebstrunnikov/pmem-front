@@ -35,5 +35,5 @@
       </div>
     </div>
   </div>
-  <div class="mt-34 mb-29 h-[1px] w-full bg-black"></div>
+  <div class="mt-34 h-[1px] w-full bg-black"></div>
 </template>

@@ -6,6 +6,7 @@
   --color-background: rgb(208, 201, 181);
   --color-primary: rgb(76, 71, 76);
   --color-primary-active: rgb(182, 64, 64);
+  --color-contrast: rgba(236, 236, 236, 1);
 
   --font-sans: "Open Sans", sans-serif;
   --font-title: "Manrope", sans-serif;
@@ -16,11 +17,11 @@
     font-weight: 700;
   }
   .text-title-m {
-    font-size: 24px;
+    font-size: 21.19px;
     font-weight: 600;
   }
-  .text-title-m {
-    font-size: 21.19px;
+  .text-body-s {
+    font-size: 16px;
     font-weight: 600;
   }
 }

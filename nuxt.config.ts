@@ -38,4 +38,9 @@ export default defineNuxtConfig({
     port: 3000,
     https: false,
   },
+  runtimeConfig: {
+    public: {
+      apiBase: "https://pmem-europa.de/api",
+    },
+  },
 });

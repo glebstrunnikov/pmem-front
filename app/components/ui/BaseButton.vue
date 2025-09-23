@@ -1,7 +1,7 @@
 <script setup lang="ts">
   const props = defineProps<{
     label: string;
-    type: "transparent" | "transparent-active";
+    type: "transparent" | "transparent-active" | "contrast";
   }>();
   let styleClass;
   switch (props.type) {
@@ -10,6 +10,9 @@
       break;
     case "transparent-active":
       styleClass = "bg-transparent-active text-title-m text-primary-active";
+      break;
+    case "contrast":
+      styleClass = "bg-transparent text-contrast text-title-m";
       break;
     default:
       styleClass = "";
