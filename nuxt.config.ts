@@ -40,7 +40,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiBase: "https://pmem-europa.de/api",
+      apiBase: `${process.env.NUXT_PUBLIC_URL}/api`,
+      url: process.env.NUXT_PUBLIC_URL,
     },
   },
 });
