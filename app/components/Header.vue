@@ -28,7 +28,7 @@
           <router-link to="/">
             <img class="mr-24" :src="logo" alt="" />
           </router-link>
-          <div class="font-title text-title-xl text-primary">
+          <div class="font-title text-title-xxl text-primary">
             <router-link to="/"> Пермский Мемориал </router-link>
           </div>
         </div>

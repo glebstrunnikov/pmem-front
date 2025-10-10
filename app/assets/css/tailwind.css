@@ -13,12 +13,24 @@
   --font-title: "Manrope", sans-serif;
 }
 @layer component {
-  .text-title-xl {
+  .text-title-xxxxl {
+    font-size: 64px;
+    font-weight: 800;
+  }
+  .text-title-xxxl {
+    font-size: 48px;
+    font-weight: 800;
+  }
+  .text-title-xxl {
     font-size: 40px;
     font-weight: 700;
   }
+  .text-title-xxl {
+    font-size: 32px;
+    font-weight: 700;
+  }
   .text-title-l {
-    font-size: 24.36px;
+    font-size: 24px;
     font-weight: 700;
   }
   .text-title-m {

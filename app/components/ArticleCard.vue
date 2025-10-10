@@ -5,6 +5,7 @@
       title: string;
       description?: string;
       date: string;
+      link?: string;
     }>(),
     {
       imageUrl: "",
@@ -12,6 +13,7 @@
       description:
         "Post description lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       date: "2025-09-23T18:12:15.374Z",
+      link: "",
     }
   );
   const formattedDate = computed(() => {
@@ -25,21 +27,27 @@
 </script>
 
 <template>
-  <div class="w-full flex h-83 border rounded-4xl overflow-hidden">
-    <div class="w-[44%] h-full border-r">
-      <img
-        v-if="imageUrl"
-        :src="imageUrl"
-        alt=""
-        class="w-full h-full object-cover"
-      />
-    </div>
-    <div class="w-[56%] h-full px-18 pt-12">
-      <div class="flex flex-col items-start">
-        <div class="text-title-l mb-3">{{ title }}</div>
-        <div class="text-body-xxs mb-6">{{ formattedDate }}</div>
-        <div v-if="description" class="text-body-xxs">{{ description }}</div>
+  <div>
+    <router-link
+      class="w-full flex h-83 border rounded-4xl overflow-hidden"
+      v-if="link"
+      :to="link"
+    >
+      <div class="w-[44%] h-full border-r">
+        <img
+          v-if="imageUrl"
+          :src="imageUrl"
+          alt=""
+          class="w-full h-full object-cover"
+        />
       </div>
-    </div>
+      <div class="w-[56%] h-full px-18 pt-12">
+        <div class="flex flex-col items-start">
+          <div class="text-title-l mb-3">{{ title }}</div>
+          <div class="text-body-xxs mb-6">{{ formattedDate }}</div>
+          <div v-if="description" class="text-body-xxs">{{ description }}</div>
+        </div>
+      </div>
+    </router-link>
   </div>
 </template>
