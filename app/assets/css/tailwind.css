@@ -37,7 +37,7 @@
     font-size: 21.19px;
     font-weight: 600;
   }
-  .text-body-s {
+  .text-body-m {
     font-size: 16px;
     font-weight: 600;
   }
@@ -48,5 +48,35 @@
   .text-body-xxs {
     font-size: 9.9px;
     font-weight: 600;
+  }
+}
+@layer base {
+  ul {
+    list-style-type: none;
+    padding-left: 0.5rem; /* or margin-left */
+  }
+  ul li::before {
+    content: "";
+    display: inline-block;
+    width: 3.5px; /* Exact pixel size ye want */
+    height: 3.5px;
+    background-color: currentColor;
+    border-radius: 50%;
+    margin-right: 0.75em;
+    vertical-align: middle;
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+  }
+
+  /* Nested lists */
+  ul ul {
+    list-style-type: circle;
+  }
+
+  ul ul ul {
+    list-style-type: square;
   }
 }

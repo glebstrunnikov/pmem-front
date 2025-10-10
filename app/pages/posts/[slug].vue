@@ -47,7 +47,7 @@
 
 <template>
   <div v-if="data?.data.length" class="w-full">
-    <div class="w-full py-6 text-body-s flex justify-between items-center">
+    <div class="w-full py-6 text-body-m flex justify-between items-center">
       <div class="max-w-100">{{ data.data?.[0]!.Title }}</div>
       <router-link to="/">← на главную</router-link>
     </div>
@@ -61,7 +61,7 @@
         :key="index"
       >
         <div
-          class="w-[60%] mb-6"
+          class="w-[60%] mb-2"
           v-if="
             block.type === 'paragraph' ||
             block.type === 'heading' ||
@@ -70,7 +70,7 @@
         >
           <div
             v-if="block.type === 'heading'"
-            :class="getHeadingStyle(block.level)"
+            :class="getHeadingStyle(block.level) + ' text-primary'"
           >
             <TextNode
               v-for="(child, index) in block.children"
@@ -78,7 +78,62 @@
               :key="index"
             />
           </div>
+          <p v-if="block.type === 'paragraph'" class="text-body-m">
+            <TextNode
+              v-for="(child, index) in block.children"
+              :block="child"
+              :key="index"
+            />
+          </p>
+          <div
+            v-if="block.type === 'quote'"
+            class="italic text-title-m text-primary-active"
+          >
+            <span>“</span
+            ><TextNode
+              v-for="(child, index) in block.children"
+              :block="child"
+              :key="index"
+            /><span>”</span>
+          </div>
         </div>
+        <template v-if="block.type === 'code'">
+          <div v-html="block.children[0]!.text"></div>
+        </template>
+
+        <template v-if="block.type === 'image'">
+          <img
+            :src="block.image.url"
+            :alt="block.image.name || 'Image'"
+            class="w-[85%] mb-2"
+        /></template>
+
+        <template v-if="block.type === 'list'">
+          <ul
+            v-if="block.format === 'unordered'"
+            class="w-[60%] text-start text-primary"
+          >
+            <li v-for="(item, idx) in block.children" :key="idx">
+              <TextNode
+                v-for="(child, index) in item.children"
+                :block="child"
+                :key="index"
+              />
+            </li>
+          </ul>
+          <ol
+            v-if="block.format === 'ordered'"
+            class="w-[60%] text-start text-primary"
+          >
+            <li v-for="(item, idx) in block.children" :key="idx">
+              <TextNode
+                v-for="(child, index) in item.children"
+                :block="child"
+                :key="index"
+              />
+            </li>
+          </ol>
+        </template>
       </template>
     </div>
   </div>
