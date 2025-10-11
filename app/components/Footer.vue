@@ -1,6 +1,13 @@
 <script setup lang="ts">
   import logo from "@/assets/images/logo-white.png";
-  const navigate = useNavigate();
+  const locale = useState("locale");
+  const switchLocale = (newLocale: string) => {
+    const locale = useState("locale");
+    const localeCookie = useCookie("locale");
+
+    locale.value = newLocale; // This is all ye need!
+    localeCookie.value = newLocale;
+  };
 </script>
 
 <template>
@@ -11,27 +18,39 @@
           class="mt-3"
           label="События"
           type="contrast"
-          @click="navigate('/posts')"
+          link="/posts"
         />
         <UiBaseButton
           class="mt-3"
           label="Проекты"
           type="contrast"
-          @click="navigate('/projects')"
+          link="/projects"
         />
         <UiBaseButton
           class="mt-3"
           label="О нас"
           type="contrast"
-          @click="navigate('/about')"
+          link="/about"
         />
         <div class="flex items-center mt-12 text-contrast text-title-m">
           <UiBaseIcon icon="language" class="mr-4" />
-          <UiBaseButton label="рус" type="contrast" />
+          <UiBaseButton
+            label="рус"
+            type="contrast"
+            @click="switchLocale('ru')"
+          />
           <div class="mx-2">/</div>
-          <UiBaseButton label="eng" type="contrast" />
+          <UiBaseButton
+            label="eng"
+            type="contrast"
+            @click="switchLocale('en')"
+          />
           <div class="mx-2">/</div>
-          <UiBaseButton label="deu" type="contrast" />
+          <UiBaseButton
+            label="deu"
+            type="contrast"
+            @click="switchLocale('de')"
+          />
         </div>
       </div>
       <div class="flex max-w-[40%]">

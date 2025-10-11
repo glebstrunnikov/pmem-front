@@ -2,6 +2,7 @@
   const props = defineProps<{
     label: string;
     type: "transparent" | "transparent-active" | "contrast";
+    link?: string;
   }>();
   let styleClass;
   switch (props.type) {
@@ -20,5 +21,12 @@
 </script>
 
 <template>
-  <div class="cursor-pointer" :class="styleClass">{{ label }}</div>
+  <router-link v-if="link" :to="link"
+    ><div class="cursor-pointer" :class="styleClass">
+      {{ label }}
+    </div></router-link
+  >
+  <div v-else class="cursor-pointer" :class="styleClass">
+    {{ label }}
+  </div>
 </template>
