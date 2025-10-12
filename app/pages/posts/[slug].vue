@@ -4,11 +4,12 @@
   const config = useRuntimeConfig();
   const route = useRoute();
   const slug = route.params.slug;
+  const locale = useState("locale");
   interface PostData {
     data: Post[];
   }
   const { data, error, pending } = useFetch<PostData>(
-    `/posts?filters[slug][$eq]=${slug}`,
+    `/posts?locale=${locale.value}&filters[slug][$eq]=${slug}&populate=*`,
     {
       baseURL: config.public.apiBase,
     }
@@ -54,6 +55,12 @@
     <div class="border flex flex-col items-center py-29">
       <div class="w-[60%] mb-20 text-primary text-title-xxl">
         {{ data.data?.[0]!.Title }}
+      </div>
+      <div v-if="data.data?.[0]!.video" class="w-[85%] mb-10">
+        <video
+          :src="config.public.url + data.data?.[0]!.video?.url"
+          controls
+        ></video>
       </div>
 
       <template

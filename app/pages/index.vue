@@ -17,9 +17,12 @@
   watch(data, (val) => {
     console.log("Data received:", val);
   });
-
   onMounted(() => {
     console.log("Hydrated data:", data.value);
+  });
+
+  watch(locale, () => {
+    page.value = 1; // Reset to first page on locale change
   });
   watch(
     data,
@@ -28,7 +31,7 @@
       console.log(newData?.data);
       console.log(newData?.data.length);
       console.log(newData?.data.length < 4);
-      console.log(!!newData?.data.length && newData?.data.length < 4);
+      console.log(!!newData?.data && newData?.data.length < 4);
       if (newData?.data) {
         if (page.value === 1) {
           // First page: replace all
@@ -38,8 +41,10 @@
           allPosts.value = [...allPosts.value, ...newData.data];
         }
       }
-      if (newData?.data && newData?.data.length < 4) {
+      if (!!newData?.data && newData?.data.length < 4) {
         showPagnator.value = false;
+      } else {
+        showPagnator.value = true;
       }
     },
     { immediate: true }
@@ -50,8 +55,9 @@
 </script>
 <template>
   <!-- <div v-if="data">{{ data }}</div> -->
-  {{ showPagnator }}
+  <!-- {{ showPagnator }}
   {{ `newdata: ${newData}` }}
+  {{ locale }} -->
   <div
     v-if="data"
     class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-14 pt-16 bg-background mb-43"

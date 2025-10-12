@@ -179,6 +179,7 @@ declare global {
     slug: string;
     Cover: StrapiMedia | null;
     localizations: PostLocalization[];
+    video: StrapiMedia | null;
   }
 
   /**
