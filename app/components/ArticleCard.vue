@@ -29,7 +29,7 @@
 <template>
   <div>
     <router-link
-      class="w-full flex h-83 border rounded-4xl overflow-hidden"
+      class="w-full flex h-83 border rounded-4xl overflow-hidden hover:bg-contrast"
       v-if="link"
       :to="link"
     >

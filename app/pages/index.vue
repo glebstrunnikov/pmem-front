@@ -55,11 +55,11 @@
   };
 </script>
 <template>
-  <!-- <div v-if="data">{{ data }}</div> -->
+  <div v-if="data">{{ data }}</div>
   <!-- {{ showPagnator }}
   {{ `newdata: ${newData}` }}
   {{ locale }} -->
-  {{ i18n.t("about") }}
+  <!-- {{ i18n.t("about") }} -->
 
   <div
     v-if="data"

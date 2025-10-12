@@ -21,4 +21,13 @@
   <span :class="getStringClass(block)" v-if="block.type === 'text'">{{
     block.text
   }}</span>
+  <span v-else-if="block.type === 'link'">
+    <a
+      :href="block.url"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-indigo hover:underline"
+      ><TextNode v-for="(child, i) in block.children" :key="i" :block="child"
+    /></a>
+  </span>
 </template>

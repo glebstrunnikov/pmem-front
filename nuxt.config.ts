@@ -58,5 +58,6 @@ export default defineNuxtConfig({
       { code: "de", language: "de-DE", file: "de.json" },
     ],
     defaultLocale: "ru",
+    strategy: "no_prefix",
   },
 });
