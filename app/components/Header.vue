@@ -17,7 +17,7 @@
   <div class="flex flex-col w-full bg-background z-20">
     <div v-if="scrollY > 100" class="h-[255px] relative w-full"></div>
     <div
-      class="w-full flex flex-col bg-background transition-all"
+      class="w-full flex flex-col bg-background transition-all z-20"
       :class="scrollY > 100 ? 'fixed top-0' : 'relative '"
     >
       <div
@@ -41,16 +41,19 @@
                   ? 'transparent-active'
                   : 'transparent'
               "
+              link="/"
             />
             <UiBaseButton
               label="Проекты"
               :type="
                 isActive('projects') ? 'transparent-active' : 'transparent'
               "
+              link="/projects"
             />
             <UiBaseButton
               label="О нас"
               :type="isActive('about') ? 'transparent-active' : 'transparent'"
+              link="/about"
             />
           </div>
         </div>
