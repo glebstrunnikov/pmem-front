@@ -1,12 +1,13 @@
 <script setup lang="ts">
   import logo from "@/assets/images/logo-white.png";
   const locale = useState("locale");
-  const switchLocale = (newLocale: string) => {
+  const i18n = useI18n();
+  const switchLocale = (newLocale: "ru" | "en" | "de") => {
     const locale = useState("locale");
     const localeCookie = useCookie("locale");
-
     locale.value = newLocale; // This is all ye need!
     localeCookie.value = newLocale;
+    i18n.setLocale(newLocale);
   };
 </script>
 
@@ -16,19 +17,19 @@
       <div class="flex flex-col items-start">
         <UiBaseButton
           class="mt-3"
-          label="События"
+          :label="i18n.t('news')"
           type="contrast"
           link="/posts"
         />
         <UiBaseButton
           class="mt-3"
-          label="Проекты"
+          :label="i18n.t('projects')"
           type="contrast"
           link="/projects"
         />
         <UiBaseButton
           class="mt-3"
-          label="О нас"
+          :label="i18n.t('about')"
           type="contrast"
           link="/about"
         />

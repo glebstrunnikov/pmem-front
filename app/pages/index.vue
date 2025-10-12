@@ -4,6 +4,7 @@
   const allPosts = ref<Post[]>([]); // Your accumulated posts
   const showPagnator = ref(true);
   const locale = useState("locale");
+  const i18n = useI18n();
   const { data, error, pending } = useFetch<StrapiResponse>(
     () =>
       `/posts?locale=${locale.value}&sort=publishedAt:desc&pagination[page]=${page.value}&pagination[pageSize]=4&populate=*`,
@@ -58,6 +59,8 @@
   <!-- {{ showPagnator }}
   {{ `newdata: ${newData}` }}
   {{ locale }} -->
+  {{ i18n.t("about") }}
+
   <div
     v-if="data"
     class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-14 pt-16 bg-background mb-43"
@@ -72,6 +75,6 @@
     />
   </div>
   <div v-if="showPagnator" class="w-full flex justify-center mb-41">
-    <Paginator @click="loadMore" />
+    <Paginator @click="loadMore" :isLoading="pending" />
   </div>
 </template>

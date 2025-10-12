@@ -3,6 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+
   app: {
     head: {
       link: [
@@ -22,6 +23,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   vite: {
     plugins: [tailwindcss()],
     server: {
@@ -31,17 +33,30 @@ export default defineNuxtConfig({
       },
     },
   },
+
   css: ["~/assets/css/tailwind.css"],
+
   devServer: {
     // host: 0.0.0.0,
     host: "localhost",
     port: 3000,
     https: false,
   },
+
   runtimeConfig: {
     public: {
       apiBase: `${process.env.NUXT_PUBLIC_URL}/api`,
       url: process.env.NUXT_PUBLIC_URL,
     },
+  },
+
+  modules: ["@nuxtjs/i18n"],
+  i18n: {
+    locales: [
+      { code: "ru", language: "ru-RU", file: "ru.json" },
+      { code: "en", language: "en-US", file: "en.json" },
+      { code: "de", language: "de-DE", file: "de.json" },
+    ],
+    defaultLocale: "ru",
   },
 });

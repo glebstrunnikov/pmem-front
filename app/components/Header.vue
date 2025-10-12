@@ -11,6 +11,7 @@
     return route.fullPath === "/" || route.fullPath === "/index";
   });
   const { y: scrollY } = useWindowScroll();
+  const i18n = useI18n();
 </script>
 
 <template>
@@ -29,13 +30,13 @@
             <img class="mr-24" :src="logo" alt="" />
           </router-link>
           <div class="font-title text-title-xxl text-primary">
-            <router-link to="/"> Пермский Мемориал </router-link>
+            <router-link to="/">{{ i18n.t("orgName") }}</router-link>
           </div>
         </div>
         <div>
           <div class="flex items-center gap-28">
             <UiBaseButton
-              label="События"
+              :label="i18n.t('news')"
               :type="
                 isActive('posts') || isMain
                   ? 'transparent-active'
@@ -44,14 +45,14 @@
               link="/"
             />
             <UiBaseButton
-              label="Проекты"
+              :label="i18n.t('projects')"
               :type="
                 isActive('projects') ? 'transparent-active' : 'transparent'
               "
               link="/projects"
             />
             <UiBaseButton
-              label="О нас"
+              :label="i18n.t('about')"
               :type="isActive('about') ? 'transparent-active' : 'transparent'"
               link="/about"
             />

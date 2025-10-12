@@ -2,9 +2,9 @@
 export default defineNuxtPlugin((nuxtApp) => {
   const event = useRequestEvent();
   const localeCookie = useCookie("locale");
-  const locale = useState("locale", () => "en");
+  const locale = useState("locale", () => "ru");
 
-  let detectedLocale = "en"; // default fallback
+  let detectedLocale = "ru"; // default fallback
 
   // Priority 1: Check cookie
   if (localeCookie.value) {
