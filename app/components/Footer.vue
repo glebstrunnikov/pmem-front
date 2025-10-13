@@ -13,7 +13,7 @@
 
 <template>
   <div class="w-full px-22 py-17 bg-black">
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between">
       <div class="flex flex-col items-start">
         <UiBaseButton
           class="mt-3"
@@ -54,23 +54,11 @@
           />
         </div>
       </div>
-      <div class="flex max-w-[40%]">
-        <div class="w-full flex items-start gap-14">
-          <img :src="logo" alt="Logo" class="w-[110px]" />
-          <div class="flex flex-col">
-            <div class="text-title-m text-contrast mb-7">
-              © ПРБОО «Центр исторической памяти», © 2025 г.
-            </div>
-            <div class="text-body-m text-contrast">
-              Данный веб-ресурс ранее принадлежал общественной организации
-              «Пермское краевое отделение общества «Мемориал» (ликвидирована
-              российскими властями в апреле 2022 года; это решение обжалуется в
-              суде). Исключительные авторские права на опубликованные
-              информационные материалы переданы ПРБОО «Центр исторической
-              памяти»
-            </div>
-          </div>
+      <div class="flex flex-col justify-between items-end">
+        <div class="text-title-m text-contrast mb-7">
+          © Perm Memorial - Europa e.V., 2025
         </div>
+        <img :src="logo" alt="Logo" class="w-[110px]" />
       </div>
     </div>
   </div>

@@ -99,10 +99,12 @@
         v-if="!searchMode && lastSearchQuery && !hideSearchResults"
         class="w-full"
       >
-        <div class="w-full flex flex-col items-center px-18">
+        <div class="w-full flex flex-col items-center px-18 bg-background">
           <div class="w-full flex items-center mb-7">
             <div class="flex-1 flex justify-start">
-              <div class="text-title-m text-primary">Результаты поиска</div>
+              <div class="text-title-m text-primary">
+                {{ i18n.t("searchResults") }}
+              </div>
             </div>
             <div class="flex-1 flex justify-center">
               <div class="text-title-m text-tomato">
@@ -130,11 +132,11 @@
               v-model="searchQuery"
               ref="searchInput"
               type="text"
-              placeholder="Поиск по ключевому слову..."
+              :placeholder="i18n.t('searchDefault') + '...'"
               class="w-full focus:outline-none focus:border-primary focus:border-[1px]"
             />
           </div>
-          <UiBaseBadge>Искать по тегам</UiBaseBadge>
+          <UiBaseBadge>{{ i18n.t("searchByTag") }}</UiBaseBadge>
           <UiBaseIcon
             icon="lookingGlass"
             class="cursor-pointer"

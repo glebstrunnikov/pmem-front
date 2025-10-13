@@ -32,7 +32,9 @@
   const { data, error, pending } = await useFetch<StrapiResponse>(
     () =>
       `/posts?locale=${locale.value}${
-        query.value ? `&filters[Title][$contains]=${query.value}` : ""
+        query.value
+          ? `&filters[$or][0][Title][$containsi]=${query.value}&filters[$or][1][BlockText][$containsi]=${query.value}`
+          : ""
       }&sort=${sort.value}&pagination[page]=${
         page.value
       }&pagination[pageSize]=4&populate=*`,

@@ -50,7 +50,7 @@
   <div v-if="data?.data.length" class="w-full">
     <div class="w-full py-6 text-body-m flex justify-between items-center">
       <div class="max-w-100">{{ data.data?.[0]!.Title }}</div>
-      <router-link to="/">{{ `← ${i18n.t("toMain")}` }}</router-link>
+      <router-link to="/">{{ `← ${i18n.t("toMainPage")}` }}</router-link>
     </div>
     <div class="border flex flex-col items-center py-29">
       <div class="w-[60%] mb-20 text-primary text-title-xxl">
