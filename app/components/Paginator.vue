@@ -7,9 +7,14 @@
 
 <template>
   <div
-    class="border rounded-4xl flex justify-center items-center px-25 py-8 cursor-pointer hover:bg-contrast"
+    class="border rounded-4xl flex justify-center items-center px-25 py-8 cursor-pointer"
+    :class="
+      isLoading
+        ? 'hover:bg-contrast bg-contrast'
+        : 'hover:bg-indigo  text-indigo hover:text-contrast'
+    "
   >
-    <div :class="isLoading ? 'text-title-xxxl' : 'text-title-l text-indigo'">
+    <div :class="isLoading ? 'text-title-xxxl' : 'text-title-l'">
       {{ isLoading ? i18n.t("loading") : i18n.t("loadMore") }}
     </div>
   </div>

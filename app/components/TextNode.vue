@@ -27,7 +27,8 @@
       target="_blank"
       rel="noopener noreferrer"
       class="text-indigo hover:underline"
-      ><TextNode v-for="(child, i) in block.children" :key="i" :block="child"
-    /></a>
+    >
+      <TextNode v-for="(child, i) in block.children" :key="i" :block="child" />
+    </a>
   </span>
 </template>
