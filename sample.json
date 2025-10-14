@@ -3,10 +3,10 @@
     {
       "id": 50,
       "documentId": "jlsn1dtrlwkboyibnkipnkvx",
-      "Title": "test 1",
-      "Subtitle": null,
+      "title": "test 1",
+      "lead": null,
       "Text": null,
-      "BlockText": [
+      "content": [
         {
           "type": "paragraph",
           "children": [{ "text": "РУССКАЯ ВЕРСИЯ", "type": "text" }]
@@ -328,16 +328,16 @@
       "publishedAt": "2025-10-12T20:04:48.330Z",
       "locale": "ru",
       "slug": "test-1",
-      "Cover": null,
+      "cover": null,
       "video": null,
       "localizations": [
         {
           "id": 15,
           "documentId": "jlsn1dtrlwkboyibnkipnkvx",
-          "Title": "test 1 en",
-          "Subtitle": "test 1 sub",
+          "title": "test 1 en",
+          "lead": "test 1 sub",
           "Text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel tincidunt orci. Proin at dolor non erat laoreet porttitor sed eget ligula. Suspendisse id libero non dolor luctus sagittis. Mauris et finibus diam, vel dictum urna. Nulla facilisi. Nullam mauris odio, lobortis a turpis in, dignissim viverra justo. Morbi vitae mattis massa, sed bibendum nisl. Integer vestibulum vitae magna vel egestas. Sed in libero non dolor sagittis auctor. Phasellus mollis sagittis congue. Pellentesque sodales dictum est non dapibus. Morbi feugiat volutpat orci ut cursus. Proin justo sem, pulvinar ut purus convallis, commodo porta augue. Donec sit amet ante ligula. Etiam euismod ultrices sapien at convallis.\n\nPraesent semper porttitor odio ac laoreet. Morbi vel purus vitae ante viverra euismod. Aliquam id ex sed libero placerat pretium ut ut quam. Vestibulum sit amet eros ligula. Cras aliquam scelerisque tortor, non commodo tellus. Donec varius quam id finibus cursus. Fusce placerat mi et odio hendrerit porttitor. Sed a orci commodo, vehicula augue eget, tempus neque. Sed volutpat id risus in sodales. Ut condimentum sapien id faucibus eleifend. Morbi dolor ipsum, tincidunt sit amet nunc et, tincidunt posuere enim. Aliquam nec luctus ipsum.\n\nNunc tempus commodo ex vel maximus. Pellentesque molestie neque vitae consectetur vulputate. Donec eget ex eu dui blandit blandit at eu magna. In hac habitasse platea dictumst. Curabitur nec dui ut nisl cursus aliquet in nec nunc. Mauris nec tincidunt ante. Donec suscipit metus augue, egestas porta turpis commodo vestibulum. Integer nec tellus at velit rhoncus tincidunt. Phasellus eleifend tincidunt orci, a tincidunt sapien volutpat eget. Duis sollicitudin erat id euismod auctor. Nulla nisi metus, fermentum eget auctor ut, placerat at nunc. Pellentesque finibus rhoncus ligula, quis feugiat ex ultricies nec. Nullam gravida turpis at cursus posuere. Donec in felis semper, finibus elit id, tempor erat. Nam neque lacus, fermentum vitae vestibulum vel, efficitur vel velit.",
-          "BlockText": [
+          "content": [
             {
               "type": "paragraph",
               "children": [{ "text": "freestar", "type": "text" }]
@@ -660,10 +660,10 @@
     {
       "id": 49,
       "documentId": "uf2bn9km7xelgzou0eq0v72f",
-      "Title": "Post 8 videoo",
-      "Subtitle": null,
+      "title": "Post 8 videoo",
+      "lead": null,
       "Text": "asasdasda",
-      "BlockText": [
+      "content": [
         {
           "type": "paragraph",
           "children": [{ "text": "aasas", "type": "text" }]
@@ -675,7 +675,7 @@
       "publishedAt": "2025-10-12T14:26:38.441Z",
       "locale": "ru",
       "slug": "post-8-video",
-      "Cover": {
+      "cover": {
         "id": 13,
         "documentId": "dk62r62i6ocjlpvjl61d3vc8",
         "name": "image.png",
@@ -759,10 +759,10 @@
     {
       "id": 34,
       "documentId": "seopbklv57kvr6u3a885misa",
-      "Title": "post 4 4 4 4 4 4 4 4 4 4",
-      "Subtitle": null,
+      "title": "post 4 4 4 4 4 4 4 4 4 4",
+      "lead": null,
       "Text": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.",
-      "BlockText": [
+      "content": [
         {
           "type": "paragraph",
           "children": [
@@ -787,7 +787,7 @@
       "publishedAt": "2025-10-09T16:56:21.343Z",
       "locale": "ru",
       "slug": "post-4-4-4-4-4-4-4-4-4-4",
-      "Cover": {
+      "cover": {
         "id": 7,
         "documentId": "ikwdg105lhn47va0w4aht6zs",
         "name": "1920x.jpg",
@@ -863,10 +863,10 @@
     {
       "id": 33,
       "documentId": "tvcl3wu480mf1lvz8qba6m7i",
-      "Title": "Post 5",
-      "Subtitle": null,
+      "title": "Post 5",
+      "lead": null,
       "Text": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Magnis dis parturient montes nascetur ridiculus mus donec. Arcu dignissim velit aliquam imperdiet mollis nullam volutpat. ",
-      "BlockText": [
+      "content": [
         {
           "type": "paragraph",
           "children": [
@@ -882,7 +882,7 @@
       "publishedAt": "2025-10-09T16:56:12.336Z",
       "locale": "ru",
       "slug": "post-5",
-      "Cover": {
+      "cover": {
         "id": 9,
         "documentId": "mqte05il3lpinmbgtgxl3ws9",
         "name": "404.jpg",

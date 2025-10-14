@@ -49,12 +49,15 @@
 <template>
   <div v-if="data?.data.length" class="w-full">
     <div class="w-full py-6 text-body-m flex justify-between items-center">
-      <div class="max-w-100">{{ data.data?.[0]!.Title }}</div>
+      <div class="max-w-100">{{ data.data?.[0]!.title }}</div>
       <router-link to="/">{{ `← ${i18n.t("toMainPage")}` }}</router-link>
     </div>
     <div class="border flex flex-col items-center py-29">
       <div class="w-[60%] mb-20 text-primary text-title-xxl">
-        {{ data.data?.[0]!.Title }}
+        {{ data.data?.[0]!.title }}
+      </div>
+      <div class="w-[60%] text-title-l text-primary">
+        {{ data.data?.[0]!.lead }}
       </div>
       <div v-if="data.data?.[0]!.video" class="w-[85%] mb-10">
         <video
@@ -64,10 +67,7 @@
         ></video>
       </div>
 
-      <template
-        v-for="(block, index) in data.data?.[0]!.BlockText"
-        :key="index"
-      >
+      <template v-for="(block, index) in data.data?.[0]!.content" :key="index">
         <div
           class="w-[60%] mb-2"
           v-if="

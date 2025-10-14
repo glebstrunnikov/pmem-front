@@ -3,10 +3,10 @@
     {
       "id": 10,
       "documentId": "jlsn1dtrlwkboyibnkipnkvx",
-      "Title": "test 1",
-      "Subtitle": "test 1 sub",
+      "title": "test 1",
+      "lead": "test 1 sub",
       "Text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel tincidunt orci. Proin at dolor non erat laoreet porttitor sed eget ligula. Suspendisse id libero non dolor luctus sagittis. Mauris et finibus diam, vel dictum urna. Nulla facilisi. Nullam mauris odio, lobortis a turpis in, dignissim viverra justo. Morbi vitae mattis massa, sed bibendum nisl. Integer vestibulum vitae magna vel egestas. Sed in libero non dolor sagittis auctor. Phasellus mollis sagittis congue. Pellentesque sodales dictum est non dapibus. Morbi feugiat volutpat orci ut cursus. Proin justo sem, pulvinar ut purus convallis, commodo porta augue. Donec sit amet ante ligula. Etiam euismod ultrices sapien at convallis.\n\nPraesent semper porttitor odio ac laoreet. Morbi vel purus vitae ante viverra euismod. Aliquam id ex sed libero placerat pretium ut ut quam. Vestibulum sit amet eros ligula. Cras aliquam scelerisque tortor, non commodo tellus. Donec varius quam id finibus cursus. Fusce placerat mi et odio hendrerit porttitor. Sed a orci commodo, vehicula augue eget, tempus neque. Sed volutpat id risus in sodales. Ut condimentum sapien id faucibus eleifend. Morbi dolor ipsum, tincidunt sit amet nunc et, tincidunt posuere enim. Aliquam nec luctus ipsum.\n\nNunc tempus commodo ex vel maximus. Pellentesque molestie neque vitae consectetur vulputate. Donec eget ex eu dui blandit blandit at eu magna. In hac habitasse platea dictumst. Curabitur nec dui ut nisl cursus aliquet in nec nunc. Mauris nec tincidunt ante. Donec suscipit metus augue, egestas porta turpis commodo vestibulum. Integer nec tellus at velit rhoncus tincidunt. Phasellus eleifend tincidunt orci, a tincidunt sapien volutpat eget. Duis sollicitudin erat id euismod auctor. Nulla nisi metus, fermentum eget auctor ut, placerat at nunc. Pellentesque finibus rhoncus ligula, quis feugiat ex ultricies nec. Nullam gravida turpis at cursus posuere. Donec in felis semper, finibus elit id, tempor erat. Nam neque lacus, fermentum vitae vestibulum vel, efficitur vel velit.",
-      "BlockText": [
+      "content": [
         {
           "type": "paragraph",
           "children": [{ "text": "freestar", "type": "text" }]

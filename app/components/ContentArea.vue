@@ -39,7 +39,7 @@
     () =>
       `/posts?locale=${locale.value}${
         query.value
-          ? `&filters[$or][0][Title][$containsi]=${query.value}&filters[$or][1][BlockText][$containsi]=${query.value}`
+          ? `&filters[$or][0][title][$containsi]=${query.value}&filters[$or][1][content][$containsi]=${query.value}`
           : ""
       }${tagSlug.value ? `&filters[tags][slug][$eq]=${tagSlug.value}` : ""}${
         sort.value ? `&sort=${sort.value}` : ""
@@ -112,8 +112,9 @@
       <ArticleCard
         v-for="post in allPosts"
         :key="post.id"
-        :title="post.Title"
-        :imageUrl="config.public.url + post.Cover?.formats?.medium.url"
+        :title="post.title"
+        :description="post.lead"
+        :imageUrl="config.public.url + post.cover?.formats?.medium.url"
         :date="post.publishedAt"
         :link="'/posts/' + post.slug"
       />

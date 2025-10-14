@@ -3,7 +3,7 @@
     defineProps<{
       imageUrl: string;
       title: string;
-      description?: string;
+      description?: string | null;
       date: string;
       link?: string;
     }>(),
@@ -41,11 +41,13 @@
           class="w-full h-full object-cover"
         />
       </div>
-      <div class="w-[56%] h-full px-18 pt-12">
-        <div class="flex flex-col items-start">
+      <div class="w-[56%] h-full flex justify-center items-center">
+        <div class="flex flex-col items-start w-[70%] h-[70%] overflow-hidden">
           <div class="text-title-l mb-3">{{ title }}</div>
           <div class="text-body-xxs mb-6">{{ formattedDate }}</div>
-          <div v-if="description" class="text-body-xxs">{{ description }}</div>
+          <div v-if="description" class="text-body-xxs line-clamp-7">
+            {{ description }}
+          </div>
         </div>
       </div>
     </router-link>

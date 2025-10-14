@@ -53,7 +53,7 @@ declare global {
   }
 
   /**
-   * Base text node in BlockText
+   * Base text node in content
    */
   interface TextNode {
     text: string;
@@ -66,7 +66,7 @@ declare global {
   }
 
   /**
-   * Link node in BlockText
+   * Link node in content
    */
   interface LinkNode {
     type: "link";
@@ -137,7 +137,7 @@ declare global {
   /**
    * Union type for all possible block types
    */
-  type BlockTextNode =
+  type contentNode =
     | ParagraphBlock
     | HeadingBlock
     | QuoteBlock
@@ -151,10 +151,10 @@ declare global {
   interface PostLocalization {
     id: number;
     documentId: string;
-    Title: string;
-    Subtitle: string | null;
+    title: string;
+    lead: string | null;
     Text: string | null;
-    BlockText: BlockTextNode[];
+    content: contentNode[];
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
@@ -168,16 +168,16 @@ declare global {
   interface Post {
     id: number;
     documentId: string;
-    Title: string;
-    Subtitle: string | null;
+    title: string;
+    lead: string | null;
     Text: string | null;
-    BlockText: BlockTextNode[];
+    content: contentNode[];
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
     locale: string;
     slug: string;
-    Cover: StrapiMedia | null;
+    cover: StrapiMedia | null;
     localizations: PostLocalization[];
     video: StrapiMedia | null;
   }
