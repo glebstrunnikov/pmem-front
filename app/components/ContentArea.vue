@@ -29,15 +29,21 @@
     }
   });
 
+  const tagSlug = computed(() => {
+    if (route.fullPath.startsWith("/tags/") && route.params.slug) {
+      return route.params.slug as string;
+    }
+  });
+
   const { data, error, pending } = await useFetch<StrapiResponse>(
     () =>
       `/posts?locale=${locale.value}${
         query.value
           ? `&filters[$or][0][Title][$containsi]=${query.value}&filters[$or][1][BlockText][$containsi]=${query.value}`
           : ""
-      }&sort=${sort.value}&pagination[page]=${
-        page.value
-      }&pagination[pageSize]=4&populate=*`,
+      }${tagSlug.value ? `&filters[tags][slug][$eq]=${tagSlug.value}` : ""}${
+        sort.value ? `&sort=${sort.value}` : ""
+      }&pagination[page]=${page.value}&pagination[pageSize]=4&populate=*`,
     {
       baseURL: config.public.apiBase,
       watch: [page, locale, query, sort],
@@ -82,15 +88,18 @@
   };
 </script>
 <template>
-  <!-- <div v-if="data">{{ data }}</div> -->
-  <!-- {{ showPagnator }}
+  <div class="w-full flex flex-col">
+    <!-- <div v-if="data">{{ data }}</div> -->
+    <!-- {{ showPagnator }}
   {{ `newdata: ${newData}` }}
   {{ locale }} -->
-  <!-- {{ i18n.t("about") }} -->
+    <!-- {{ i18n.t("about") }} -->
+    <!-- {{ route }} -->
+    <!-- <br /> -->
+    <!-- {{ tagSlug }} -->
 
-  <div class="w-full flex flex-col">
     <div
-      v-if="query && !data?.data.length"
+      v-if="(query || tagSlug) && !data?.data.length"
       class="w-full flex flex-col items-center text-center mt-18"
     >
       <div class="text-title-xxxl text-tomato mb-11">Ничего не нашлось</div>

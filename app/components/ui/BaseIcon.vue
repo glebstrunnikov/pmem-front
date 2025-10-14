@@ -3,6 +3,7 @@
   import LookingGlassIcon from "@/assets/icons/looking-glass.svg?raw";
   import Cross from "@/assets/icons/cross.svg?raw";
   import Arrows from "@/assets/icons/arrows.svg?raw";
+  import ArrowBack from "@/assets/icons/arrow-back.svg?raw";
 
   const props = defineProps<{
     icon: string;
@@ -14,6 +15,7 @@
     lookingGlass: { source: LookingGlassIcon, defaultColor: "#4C474C" },
     cross: { source: Cross, defaultColor: "#4C474C" },
     arrows: { source: Arrows, defaultColor: "#4C474C" },
+    arrowBack: { source: ArrowBack, defaultColor: "#4C474C" },
   };
 
   const colorStyle = computed(() => {

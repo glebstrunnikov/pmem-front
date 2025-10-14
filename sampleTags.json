@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "documentId": "lc7thhfpzhe4mw2he6dhbii9",
+      "name": "video",
+      "createdAt": "2025-10-14T19:39:46.423Z",
+      "updatedAt": "2025-10-14T19:39:46.423Z",
+      "publishedAt": "2025-10-14T19:39:46.448Z",
+      "locale": "ru",
+      "slug": "video"
+    },
+    {
+      "id": 6,
+      "documentId": "oydhi2rs46bu88lnpq4e6j94",
+      "name": "Фото",
+      "createdAt": "2025-10-14T19:40:02.294Z",
+      "updatedAt": "2025-10-14T19:48:07.451Z",
+      "publishedAt": "2025-10-14T19:48:07.502Z",
+      "locale": "ru",
+      "slug": "photo"
+    }
+  ],
+  "meta": {
+    "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 2 }
+  }
+}

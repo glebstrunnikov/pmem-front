@@ -33,10 +33,11 @@
     to("/search?query=" + searchQuery.value);
     searchMode.value = false;
   }
-  watch(route, async () => {
+  watch(route, () => {
     if (!lastSearchQuery.value) {
       hideSearchResults.value = false;
     }
+    searchMode.value = false;
   });
 </script>
 
@@ -136,7 +137,11 @@
               class="w-full focus:outline-none focus:border-primary focus:border-[1px]"
             />
           </div>
-          <UiBaseBadge>{{ i18n.t("searchByTag") }}</UiBaseBadge>
+          <UiBaseBadge
+            ><router-link to="/tags">{{
+              i18n.t("searchByTag")
+            }}</router-link></UiBaseBadge
+          >
           <UiBaseIcon
             icon="lookingGlass"
             class="cursor-pointer"
