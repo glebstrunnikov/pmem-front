@@ -22,15 +22,15 @@
   }
 </script>
 <template>
-  <div class="w-full flex justify-between items-start">
-    <div class="flex-3"><slot></slot></div>
+  <div class="w-full flex max-md:flex-col justify-between items-start">
+    <div class="flex-3 max-md:order-1"><slot></slot></div>
     <ContentArea
       :search="true"
-      class="!flex-8"
-      contentClass="flex flex-col gap-14 pt-16 bg-background mb-43 max-w-207"
+      class="!flex-8 max-md:order-3"
+      contentClass="flex flex-col gap-14 pt-16 bg-background mb-25 max-w-207"
     />
     <div
-      class="flex-3 flex justify-end items-start pt-16"
+      class="flex-3 flex justify-end items-start pt-16 max-md:order-2 max-md:flex-1 max-md:pt-6"
       @click="toggleSortMenu"
     >
       <div class="flex justify-end items-center cursor-pointer">

@@ -13,7 +13,7 @@
 
 <template>
   <div class="w-full px-22 py-17 bg-black">
-    <div class="flex justify-between">
+    <div class="flex flex-col md:flex-row justify-between gap-12">
       <div class="flex flex-col items-start">
         <UiBaseButton
           class="mt-3"
@@ -54,8 +54,8 @@
           />
         </div>
       </div>
-      <div class="flex flex-col justify-between items-end">
-        <div class="text-title-m text-contrast mb-7">
+      <div class="flex flex-col justify-between items-start md:items-end">
+        <div class="text-title-m text-contrast mb-12 md:mb-7">
           © Perm Memorial - Europa e.V., 2025
         </div>
         <img :src="logo" alt="Logo" class="w-[110px]" />

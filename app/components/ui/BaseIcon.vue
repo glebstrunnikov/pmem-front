@@ -4,6 +4,7 @@
   import Cross from "@/assets/icons/cross.svg?raw";
   import Arrows from "@/assets/icons/arrows.svg?raw";
   import ArrowBack from "@/assets/icons/arrow-back.svg?raw";
+  import Burger from "@/assets/icons/burger.svg?raw";
 
   const props = defineProps<{
     icon: string;
@@ -16,6 +17,7 @@
     cross: { source: Cross, defaultColor: "#4C474C" },
     arrows: { source: Arrows, defaultColor: "#4C474C" },
     arrowBack: { source: ArrowBack, defaultColor: "#4C474C" },
+    burger: { source: Burger },
   };
 
   const colorStyle = computed(() => {

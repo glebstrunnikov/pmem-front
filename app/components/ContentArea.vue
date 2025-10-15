@@ -13,7 +13,7 @@
     }>(),
     {
       contentClass:
-        "grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-14 pt-16 bg-background mb-43",
+        "grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-14 pt-16 bg-background mb-25",
     }
   );
   const query = computed(() => {
@@ -119,7 +119,7 @@
         :link="'/posts/' + post.slug"
       />
     </div>
-    <div v-if="data && showPagnator" class="w-full flex justify-center mb-41">
+    <div v-if="data && showPagnator" class="w-full flex justify-center mb-20">
       <Paginator @click="loadMore" :isLoading="pending" />
     </div>
   </div>

@@ -13,11 +13,20 @@
     return route.fullPath === "/" || route.fullPath === "/index";
   });
   const { y: scrollY } = useWindowScroll();
+  const scrolled = ref(false);
+  watch(scrollY, (newY) => {
+    if (newY > 140) {
+      scrolled.value = true;
+    } else if (newY === 0) {
+      scrolled.value = false;
+    }
+  });
   const i18n = useI18n();
   const searchMode = ref(false);
   const searchQuery = ref("");
   const lastSearchQuery = computed(() => route.query.query);
   const hideSearchResults = ref(false);
+  const showMobileMenu = ref(false);
   function jumpToSearch() {
     if (!searchMode.value) {
       searchMode.value = true;
@@ -42,30 +51,40 @@
 </script>
 
 <template>
-  <div class="flex flex-col w-full bg-background z-20">
-    <div v-if="scrollY > 100" class="h-[300px] relative w-full"></div>
-    <div
-      class="w-full flex flex-col justify-between bg-background transition-all z-20"
-      :class="
-        scrollY > 100 && !searchMode
-          ? 'fixed top-0 h-[115px]'
-          : scrollY > 100 && searchMode
-          ? 'fixed top-0 h-[300px]'
-          : 'relative h-[300px]'
-      "
-    >
-      <div></div>
-      <div class="flex justify-between items-center w-full px-18">
+  <div class="flex flex-col w-full bg-background z-20 sticky top-0">
+    <div class="w-full flex flex-col justify-between bg-background z-20">
+      <div
+        class="flex justify-between w-full px-6 sm:px-12 md:px-18 transition-all duration-300 pt-5 pb-9 items-center"
+        :class="scrolled ? '' : 'md:pt-20 md:pb-29'"
+      >
         <div class="flex items-center">
           <router-link to="/">
             <img class="mr-24" :src="logo" alt="" />
           </router-link>
-          <div class="font-title text-title-xxl text-primary">
+          <div class="font-title text-title-xxl text-primary hidden md:block">
             <router-link to="/">{{ i18n.t("orgName") }}</router-link>
           </div>
         </div>
+
         <div>
-          <div class="flex items-center gap-28">
+          <div
+            class="md:hidden flex justify-end"
+            :class="showMobileMenu ? 'mb-6' : ''"
+          >
+            <UiBaseIcon
+              :icon="showMobileMenu ? 'cross' : 'burger'"
+              class="cursor-pointer"
+              @click="showMobileMenu = !showMobileMenu"
+            />
+          </div>
+          <div
+            class="flex flex-col md:flex-row items-end md:items-center gap-6 lg:gap-28 transition-all duration-300 md:opacity-100 md:max-h-96"
+            :class="
+              showMobileMenu
+                ? 'opacity-100 max-h-96'
+                : 'opacity-0 max-h-0 overflow-hidden md:flex'
+            "
+          >
             <UiBaseButton
               :label="i18n.t('news')"
               :type="
@@ -100,8 +119,8 @@
         v-if="!searchMode && lastSearchQuery && !hideSearchResults"
         class="w-full"
       >
-        <div class="w-full flex flex-col items-center px-18 bg-background">
-          <div class="w-full flex items-center mb-7">
+        <div class="w-full flex flex-col items-center bg-background">
+          <div class="w-full flex items-center mb-7 px-6 sm:px-12 md:px-18">
             <div class="flex-1 flex justify-start">
               <div class="text-title-m text-primary">
                 {{ i18n.t("searchResults") }}
@@ -120,13 +139,13 @@
               />
             </div>
           </div>
-          <div class="w-full h-[3px] bg-black"></div>
+          <div class="w-full h-[2px] bg-black"></div>
         </div>
       </div>
-      <div v-if="searchMode" class="w-full flex flex-col items-center px-18">
+      <div v-if="searchMode" class="w-full flex flex-col items-center">
         <form
           @submit.prevent="search"
-          class="w-full flex gap-10 items-center mb-7"
+          class="w-full flex gap-10 items-center mb-7 px-6 sm:px-12 md:px-18"
         >
           <div class="text-title-m text-primary flex-999">
             <input
@@ -137,7 +156,7 @@
               class="w-full focus:outline-none focus:border-primary focus:border-[1px]"
             />
           </div>
-          <UiBaseBadge
+          <UiBaseBadge class="hidden md:block"
             ><router-link to="/tags">{{
               i18n.t("searchByTag")
             }}</router-link></UiBaseBadge
@@ -148,8 +167,14 @@
             @click="search"
           />
         </form>
-        <div class="w-full h-[3px] bg-black"></div>
+        <UiBaseBadge class="block md:hidden mb-6"
+          ><router-link to="/tags">{{
+            i18n.t("searchByTag")
+          }}</router-link></UiBaseBadge
+        >
+        <div class="w-full h-[2px] bg-black"></div>
       </div>
+
       <div class="h-[1px] w-full bg-black border-none"></div>
     </div>
   </div>

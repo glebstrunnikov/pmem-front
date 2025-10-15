@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="w-full min-h-screen px-18 pb-17 bg-background">
+  <div class="w-full min-h-screen px-6 sm:px-12 md:px-18 bg-background">
     <slot />
   </div>
   <Footer />

@@ -47,19 +47,22 @@
 </script>
 
 <template>
-  <div v-if="data?.data.length" class="w-full">
+  <div v-if="data?.data.length" class="w-full pb-20 bg-background">
     <div class="w-full py-6 text-body-m flex justify-between items-center">
       <div class="max-w-100">{{ data.data?.[0]!.title }}</div>
       <router-link to="/">{{ `← ${i18n.t("toMainPage")}` }}</router-link>
     </div>
-    <div class="border flex flex-col items-center py-29">
-      <div class="w-[60%] mb-20 text-primary text-title-xxl">
+    <div class="md:border flex flex-col items-center py-29">
+      <div class="w-full md:w-[60%] mb-20 text-primary text-title-xxl">
         {{ data.data?.[0]!.title }}
       </div>
-      <div class="w-[60%] text-title-l text-primary">
+      <div class="w-full md:w-[60%] text-title-l text-primary">
         {{ data.data?.[0]!.lead }}
       </div>
-      <div v-if="data.data?.[0]!.video" class="w-[85%] mb-10">
+      <div
+        v-if="data.data?.[0]!.video"
+        class="w-full md:w-full md:w-[60%] mb-10"
+      >
         <video
           :src="config.public.url + data.data?.[0]!.video?.url"
           controls
@@ -69,7 +72,7 @@
 
       <template v-for="(block, index) in data.data?.[0]!.content" :key="index">
         <div
-          class="w-[60%] mb-2"
+          class="w-full md:w-[60%] mb-2"
           v-if="
             block.type === 'paragraph' ||
             block.type === 'heading' ||
@@ -113,13 +116,13 @@
           <img
             :src="block.image.url"
             :alt="block.image.name || 'Image'"
-            class="w-[85%] mb-2"
+            class="w-full md:w-full md:w-[60%] mb-2"
         /></template>
 
         <template v-if="block.type === 'list'">
           <ul
             v-if="block.format === 'unordered'"
-            class="w-[60%] text-start text-primary"
+            class="w-full md:w-[60%] text-start text-primary"
           >
             <li v-for="(item, idx) in block.children" :key="idx">
               <TextNode
@@ -131,7 +134,7 @@
           </ul>
           <ol
             v-if="block.format === 'ordered'"
-            class="w-[60%] text-start text-primary"
+            class="w-full md:w-[60%] text-start text-primary"
           >
             <li v-for="(item, idx) in block.children" :key="idx">
               <TextNode
