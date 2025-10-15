@@ -7,7 +7,7 @@
 
 <template>
   <div
-    class="border rounded-4xl flex justify-center items-center px-25 py-8 cursor-pointer"
+    class="border rounded-4xl flex justify-center items-center w-125 h-25 cursor-pointer"
     :class="
       isLoading
         ? 'hover:bg-contrast bg-contrast'
