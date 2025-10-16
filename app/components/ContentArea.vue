@@ -117,6 +117,7 @@
         :imageUrl="config.public.url + post.cover?.formats?.medium.url"
         :date="post.publishedAt"
         :link="'/posts/' + post.slug"
+        :tags="post.tags"
       />
     </div>
     <div v-if="data && showPagnator" class="w-full flex justify-center mb-20">

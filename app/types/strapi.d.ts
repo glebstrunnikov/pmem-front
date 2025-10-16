@@ -180,6 +180,7 @@ declare global {
     cover: StrapiMedia | null;
     localizations: PostLocalization[];
     video: StrapiMedia | null;
+    tags: Tag[];
   }
 
   /**
@@ -213,6 +214,17 @@ declare global {
   interface StrapiSingleResponse<T = Post> {
     data: T;
     meta?: ResponseMeta;
+  }
+
+  interface Tag {
+    id: number;
+    documentId: string;
+    name: string;
+    slug: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    locale: string;
   }
 }
 
