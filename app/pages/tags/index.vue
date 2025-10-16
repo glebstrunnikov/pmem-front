@@ -21,7 +21,7 @@
     <div class="text-title-m text-primary mb-10 mt-18">
       {{ i18n.t("tagsList") }}
     </div>
-    <TagsBlock
+    <TagCloudCardBlock
       v-for="letter in [...abc.ru, ...abc.en]"
       :letter="letter"
       :tags="getTagsByFirstLetter(letter, data.data)"

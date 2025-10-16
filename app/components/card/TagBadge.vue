@@ -2,7 +2,7 @@
   withDefaults(
     defineProps<{
       name: string;
-      slug: string;
+      slug?: string;
       styleClass?: string;
     }>(),
     {

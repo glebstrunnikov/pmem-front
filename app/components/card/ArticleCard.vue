@@ -73,7 +73,7 @@
             {{ description }}
           </div>
           <div class="relative w-full">
-            <CardTags
+            <CardTagCloudCard
               class="absolute top-0 flex flex-wrap z-50"
               @tag-hovered="toggleTagHover(true)"
               @tag-unhovered="toggleTagHover(false)"

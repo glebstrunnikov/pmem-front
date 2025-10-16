@@ -109,7 +109,7 @@
       <div class="text-title-xxxl text-primary">pmemeuropa@gmail.com</div>
     </div>
     <div v-if="data" :class="contentClass">
-      <ArticleCard
+      <CardArticleCard
         v-for="post in allPosts"
         :key="post.id"
         :title="post.title"
