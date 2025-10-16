@@ -8,7 +8,7 @@
     }
   );
   function getStringClass(child: TextNode) {
-    let result = "";
+    let result = "whitespace-pre-line";
     if (child.bold) result += " font-bold";
     if (child.italic) result += " italic";
     if (child.underline) result += " underline";
@@ -31,4 +31,5 @@
       <TextNode v-for="(child, i) in block.children" :key="i" :block="child" />
     </a>
   </span>
+  <slot></slot>
 </template>

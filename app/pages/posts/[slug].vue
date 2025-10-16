@@ -58,15 +58,12 @@
 
 <template>
   <div v-if="data?.data.length" class="w-full pb-20 bg-background relative">
-    <div class="w-[150%] h-[1px] -ml-20 bg-black absolute top-80 z-10"></div>
     <div class="w-full my-6 text-body-m flex justify-between items-center">
       <div class="max-w-100">{{ data.data?.[0]!.title }}</div>
       <div>{{ formattedDate }}</div>
       <router-link to="/">{{ `← ${i18n.t("toMainPage")}` }}</router-link>
     </div>
-    <div
-      class="md:border rounded-4xl flex flex-col items-center pt-29 relative z-20 bg-background"
-    >
+    <ArticleFrame>
       <div
         class="w-full flex justify-center items-center max-w-[60%] mb-22 z-10"
       >
@@ -170,6 +167,6 @@
           <div>{{ i18n.t("share") }}</div>
         </div>
       </div>
-    </div>
+    </ArticleFrame>
   </div>
 </template>

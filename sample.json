@@ -1258,5 +1258,113 @@
     "meta": {
       "pagination": { "page": 1, "pageSize": 4, "pageCount": 2, "total": 8 }
     }
+  },
+  {
+    "data": {
+      "id": 1,
+      "documentId": "csvp9emuhu48i6t1ddudjw4t",
+      "contentTop": [
+        {
+          "type": "paragraph",
+          "children": [{ "text": "Дорогие друзья,", "type": "text" }]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Добро пожаловать на сайт общественной организации \"Пермский Мемориал - Европа\".",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "\"Пермский Мемориал - Европа\" основан в 2023 году в Германии как наследник российской НКО \"Пермский Мемориал\". Основатели - российские члены \"Пермского Мемориала\", выехавшие в 2022 году в Германию, и немецкие коллеги.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Мы продолжаем работать в сфере сохранения памяти о жертвах политических репрессий в СССР, продвижении ценностей демократии и прав человека.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "На нашем сайте вы можете узнать об актуальных новостях организации и о наших проектах.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Вы можете поддержать нашу работу - реквизиты организации указаны ниже. Мы будем сердечно благодарны вам!",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "С уважением,\nкоманда \"Пермский Мемориал - Европа\".",
+              "type": "text"
+            }
+          ]
+        },
+        { "type": "paragraph", "children": [{ "text": "", "type": "text" }] }
+      ],
+      "contentLeft": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Адрес для писем:\nPerm Memorial – Europa, e. V. \nHaus der Demokratie und Menschenrechte, \nGreifswalder Straße 4,10405, Berlin",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "E-mail:\nperm.memorial.europa@gmail.com",
+              "type": "text"
+            }
+          ]
+        },
+        { "type": "paragraph", "children": [{ "text": "", "type": "text" }] }
+      ],
+      "contentRight": [
+        {
+          "type": "paragraph",
+          "children": [{ "text": "Банковские реквизиты:", "type": "text" }]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Perm Memorial - Europa e.V.\nDE41 4306 0967 1347 6657 00\nBIC GENODEM1GLS\nGLS Bank",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "createdAt": "2025-10-16T21:06:48.081Z",
+      "updatedAt": "2025-10-16T21:12:37.771Z",
+      "publishedAt": "2025-10-16T21:12:37.752Z",
+      "locale": "ru"
+    },
+    "meta": {}
   }
 ]
