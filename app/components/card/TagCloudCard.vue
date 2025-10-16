@@ -1,8 +1,9 @@
 <script setup lang="ts">
-  defineProps<{
+  const props = defineProps<{
     tags: Tag[];
+    unwrapped?: boolean;
   }>();
-  const tagsLongShown = ref(false);
+  const tagsLongShown = ref(props.unwrapped ? true : false);
   defineEmits<{
     (e: "tag-hovered"): void;
     (e: "tag-unhovered"): void;

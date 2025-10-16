@@ -1,3 +1,20 @@
 {
-  "about": "Über uns"
+  "news": "Neuigkeiten",
+  "projects": "Projekte",
+  "about": "Über uns",
+  "loadMore": "Mehr laden",
+  "loading": "Wird geladen",
+  "orgName": "Perm Memorial - Europa e.V.",
+  "toProjectPage": "Zur Projektseite",
+  "toMainPage": "Zur Hauptseite",
+  "oldFirst": "Alt zuerst",
+  "newFirst": "Neu zuerst",
+  "nothingFound": "Keine Treffer",
+  "reachOut": "Kontakt aufnehmen",
+  "searchResults": "Suchergebnisse",
+  "searchByTag": "Suche nach Tag",
+  "searchDefault": "Suche nach Überschriften und Text",
+  "backToTags": "Zurück zur Tag-Liste",
+  "tagsList": "Tag-Liste",
+  "share": "Teilen"
 }

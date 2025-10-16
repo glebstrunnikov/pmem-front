@@ -5,6 +5,7 @@
   const route = useRoute();
   const slug = route.params.slug;
   const i18n = useI18n();
+
   interface PostData {
     data: Post[];
   }
@@ -44,19 +45,37 @@
         return "text-body-m";
     }
   }
+
+  const formattedDate = computed(() => {
+    if (!data.value.data) return "";
+    const date = new Date(data.value.data?.[0]!.publishedAt || new Date());
+    return `${date.getDate()}/${date.getMonth() + 1}/${date
+      .getFullYear()
+      .toString()
+      .slice(-2)}`;
+  });
 </script>
 
 <template>
-  <div v-if="data?.data.length" class="w-full pb-20 bg-background">
-    <div class="w-full py-6 text-body-m flex justify-between items-center">
+  <div v-if="data?.data.length" class="w-full pb-20 bg-background relative">
+    <div class="w-[150%] h-[1px] -ml-20 bg-black absolute top-80 z-10"></div>
+    <div class="w-full my-6 text-body-m flex justify-between items-center">
       <div class="max-w-100">{{ data.data?.[0]!.title }}</div>
+      <div>{{ formattedDate }}</div>
       <router-link to="/">{{ `← ${i18n.t("toMainPage")}` }}</router-link>
     </div>
-    <div class="md:border flex flex-col items-center py-29">
+    <div
+      class="md:border rounded-4xl flex flex-col items-center pt-29 relative z-20 bg-background"
+    >
+      <div
+        class="w-full flex justify-center items-center max-w-[60%] mb-22 z-10"
+      >
+        <CardTagCloudCard :tags="data.data?.[0]!.tags" unwrapped />
+      </div>
       <div class="w-full md:w-[60%] mb-20 text-primary text-title-xxl">
         {{ data.data?.[0]!.title }}
       </div>
-      <div class="w-full md:w-[60%] text-title-l text-primary">
+      <div class="w-full md:w-[60%] text-title-l mb-6">
         {{ data.data?.[0]!.lead }}
       </div>
       <div
@@ -89,7 +108,7 @@
               :key="index"
             />
           </div>
-          <p v-if="block.type === 'paragraph'" class="text-body-m">
+          <p v-if="block.type === 'paragraph'" class="text-title-l-thin">
             <TextNode
               v-for="(child, index) in block.children"
               :block="child"
@@ -146,6 +165,11 @@
           </ol>
         </template>
       </template>
+      <div class="w-full h-46 mt-29 border-t p-20">
+        <div class="flex justify-start items-center gap-15 text-body-m">
+          <div>{{ i18n.t("share") }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

@@ -51,8 +51,8 @@
 </script>
 
 <template>
-  <div class="flex flex-col w-full bg-background z-20 sticky top-0">
-    <div class="w-full flex flex-col justify-between bg-background z-20">
+  <div class="flex flex-col w-full bg-background z-30 sticky top-0">
+    <div class="w-full flex flex-col justify-between bg-background z-30">
       <div
         class="flex justify-between w-full px-6 sm:px-12 md:px-18 transition-all duration-300 pt-5 pb-9 items-center"
         :class="scrolled ? '' : 'md:pt-20 md:pb-29'"

@@ -1,3 +1,20 @@
 {
-  "about": "About"
+  "news": "News",
+  "projects": "Projects",
+  "about": "About Us",
+  "loadMore": "Load More",
+  "loading": "Loading...",
+  "orgName": "Perm Memorial",
+  "toProjectPage": "to project page",
+  "toMainPage": "to main page",
+  "oldFirst": "Oldest First",
+  "newFirst": "Newest First",
+  "nothingFound": "Nothing Found",
+  "reachOut": "You can contact us for more information:",
+  "searchResults": "Search Results",
+  "searchByTag": "Search by tags",
+  "searchDefault": "Search by titles and text",
+  "backToTags": "Back to tags list",
+  "tagsList": "Tags List",
+  "share": "Share"
 }
