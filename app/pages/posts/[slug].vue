@@ -5,23 +5,60 @@
   const route = useRoute();
   const slug = route.params.slug;
   const i18n = useI18n();
+  const locale = useState("locale");
+  const tempLocale = ref(locale.value);
+  const localeLoopCounter = ref(0);
 
   interface PostData {
     data: Post[];
   }
   const { data, error, pending } = useFetch<PostData>(
-    `/posts?filters[slug][$eq]=${slug}&populate=*`,
+    () =>
+      `/posts?filters[slug][$eq]=${slug}&locale=${tempLocale.value}&populate=*`,
     {
       baseURL: config.public.apiBase,
+      watch: [tempLocale],
     }
   );
+
+  watch(locale, (newLocale) => {
+    const otherLocaleVersion = data.value?.data[0]?.localizations.find(
+      (loc) => loc.locale === newLocale
+    );
+    if (otherLocaleVersion) {
+      navigate(`/posts/${otherLocaleVersion.slug}`);
+    }
+    tempLocale.value = newLocale;
+    localeLoopCounter.value = 0;
+  });
 
   watch(
     data,
     (val) => {
       console.log("Data received:", val);
       if (val?.data && val.data?.length === 0) {
-        navigate("/");
+        console.log("no data");
+        if (localeLoopCounter.value > 2) {
+          localeLoopCounter.value = 0;
+          navigate(`/`);
+          return;
+        }
+
+        switch (tempLocale.value) {
+          case "en":
+            tempLocale.value = "ru";
+            localeLoopCounter.value++;
+            break;
+          case "ru":
+            console.log("switching to de");
+            tempLocale.value = "de";
+            localeLoopCounter.value++;
+            break;
+          case "de":
+            tempLocale.value = "en";
+            localeLoopCounter.value++;
+            break;
+        }
       }
     },
     { immediate: true }
@@ -57,6 +94,8 @@
 </script>
 
 <template>
+  {{ locale }}
+  {{ localeLoopCounter }}
   <div v-if="data?.data.length" class="w-full pb-20 bg-background relative">
     <div class="w-full my-6 text-body-m flex justify-between items-center">
       <div class="max-w-100">{{ data.data?.[0]!.title }}</div>

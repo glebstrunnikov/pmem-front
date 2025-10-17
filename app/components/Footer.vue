@@ -5,7 +5,7 @@
   const switchLocale = (newLocale: "ru" | "en" | "de") => {
     const locale = useState("locale");
     const localeCookie = useCookie("locale");
-    locale.value = newLocale; // This is all ye need!
+    locale.value = newLocale;
     localeCookie.value = newLocale;
     i18n.setLocale(newLocale);
   };
