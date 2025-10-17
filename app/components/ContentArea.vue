@@ -102,9 +102,11 @@
       v-if="(query || tagSlug) && !data?.data.length"
       class="w-full flex flex-col items-center text-center mt-18"
     >
-      <div class="text-title-xxxl text-tomato mb-11">Ничего не нашлось</div>
+      <div class="text-title-xxxl text-tomato mb-11">
+        {{ i18n.t("nothingFound") }}
+      </div>
       <div class="text-title-xxxl text-primary mb-4">
-        Вы можете связаться с нами для уточнения информации:
+        {{ i18n.t("reachOut") }}
       </div>
       <div class="text-title-xxxl text-primary">pmemeuropa@gmail.com</div>
     </div>

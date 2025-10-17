@@ -13,13 +13,16 @@
       `/tags?filters[slug][$eq]=${tagSlug.value}&locale=${locale.value}&populate=localizations`,
     {
       baseURL: useRuntimeConfig().public.apiBase,
+      watch: [locale],
     }
   );
   watch(locale, (newLocale) => {
     if (newLocale && data.value) {
-      const newLocaleTag = data.value.data[0].localizations.find((loc: any) => {
-        return loc.locale === newLocale;
-      });
+      const newLocaleTag = data.value.data[0]?.localizations?.find(
+        (loc: any) => {
+          return loc.locale === newLocale;
+        }
+      );
       if (newLocaleTag) {
         navigate(`/tags/${newLocaleTag.slug}`);
       }

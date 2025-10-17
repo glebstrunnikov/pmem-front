@@ -94,8 +94,6 @@
 </script>
 
 <template>
-  {{ locale }}
-  {{ localeLoopCounter }}
   <div v-if="data?.data.length" class="w-full pb-20 bg-background relative">
     <div class="w-full my-6 text-body-m flex justify-between items-center">
       <div class="max-w-100">{{ data.data?.[0]!.title }}</div>
