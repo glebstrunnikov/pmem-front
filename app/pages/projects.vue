@@ -10,21 +10,21 @@
 
 <template>
   <div class="w-full h-full flex flex-col">
-    <div class="w-full pl-18 mt-26 mb-47 relative">
+    <div class="w-full pl-4 md:pl-18 mt-20 md:mt-26 mb-20 md:mb-40 relative">
       <img :src="GulagMap" alt="" />
-      <div class="absolute left-[20%] bottom-[5%] text-title-m">
+      <div class="md:absolute left-[20%] bottom-[5%] text-title-m">
         <a href="#">{{ `${i18n.t("toProjectPage")} →` }}</a>
       </div>
     </div>
-    <div class="w-full pl-70 pr-40 mb-41 relative">
+    <div class="w-full pl-14 pr-8 md:pl-70 md:pr-40 mb-20 md:mb-40 relative">
       <img class="w-full" :src="OralHistory" alt="" />
-      <div class="absolute right-[30%] bottom-0 text-title-m">
+      <div class="md:absolute right-[30%] bottom-0 text-title-m">
         <a href="#">{{ `${i18n.t("toProjectPage")} →` }}</a>
       </div>
     </div>
-    <div class="ml-45 mr-40 mb-40 relative">
+    <div class="ml-9 mr-8 md:ml-45 md:mr-40 mb-20 md:mb-40 relative">
       <img class="w-full" :src="InCaptivity" alt="" />
-      <div class="absolute left-[18%] bottom-[15%] text-title-m">
+      <div class="md:absolute left-[18%] bottom-[15%] text-title-m">
         <a href="#">{{ `${i18n.t("toProjectPage")} →` }}</a>
       </div>
     </div>

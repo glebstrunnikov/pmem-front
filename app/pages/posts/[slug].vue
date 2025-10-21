@@ -32,6 +32,54 @@
     localeLoopCounter.value = 0;
   });
 
+  function updateMetatags(post: Post) {
+    useHead({
+      title: post.title,
+      meta: [
+        {
+          name: "description",
+          content: post.lead || post.title,
+        },
+        {
+          property: "og:title",
+          content: post.title,
+        },
+        {
+          property: "og:type",
+          content: "article",
+        },
+        {
+          property: "og:url",
+          content: `${config.public.url || ""}/posts/${post.slug}`,
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          name: "twitter:title",
+          content: post.title,
+        },
+        {
+          name: "twitter:description",
+          content: post.lead || post.title,
+        },
+        ...(post.cover
+          ? [
+              {
+                property: "og:image",
+                content: config.public.url + post.cover.url,
+              },
+              {
+                name: "twitter:image",
+                content: config.public.url + post.cover.url,
+              },
+            ]
+          : []),
+      ],
+    });
+  }
+
   watch(
     data,
     (val) => {
@@ -59,6 +107,8 @@
             localeLoopCounter.value++;
             break;
         }
+      } else if (val?.data) {
+        updateMetatags(val!.data[0]!);
       }
     },
     { immediate: true }
@@ -114,12 +164,12 @@
       </div>
       <div
         v-if="data.data?.[0]!.video"
-        class="w-full md:w-full md:w-[60%] mb-10"
+        class="w-full md:w-[60%] mb-10 max-h-[80dvh]"
       >
         <video
           :src="config.public.url + data.data?.[0]!.video?.url"
           controls
-          class="w-full"
+          class="max-h-[80dvh] w-full"
         ></video>
       </div>
 
@@ -169,7 +219,7 @@
           <img
             :src="block.image.url"
             :alt="block.image.name || 'Image'"
-            class="w-full md:w-full md:w-[60%] mb-2"
+            class="w-full md:w-[80%] mb-2 max-h-[80dvh] object-contain"
         /></template>
 
         <template v-if="block.type === 'list'">
