@@ -172,6 +172,16 @@
           class="max-h-[80dvh] w-full"
         ></video>
       </div>
+      <div
+        class="w-full md:w-[60%] mb-10 max-h-[80dvh]"
+        v-else-if="data.data?.[0]!.cover"
+      >
+        <img
+          :src="config.public.url + data.data?.[0]!.cover?.url"
+          alt="Cover Image"
+          class="max-h-[80dvh] w-full object-cover"
+        />
+      </div>
 
       <template v-for="(block, index) in data.data?.[0]!.content" :key="index">
         <div
