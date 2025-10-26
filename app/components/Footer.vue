@@ -1,14 +1,6 @@
 <script setup lang="ts">
   import logo from "@/assets/images/logo-white.png";
-  const locale = useState("locale");
   const i18n = useI18n();
-  const switchLocale = (newLocale: "ru" | "en" | "de") => {
-    const locale = useState("locale");
-    const localeCookie = useCookie("locale");
-    locale.value = newLocale;
-    localeCookie.value = newLocale;
-    i18n.setLocale(newLocale);
-  };
 </script>
 
 <template>
@@ -33,26 +25,7 @@
           type="contrast"
           link="/about"
         />
-        <div class="flex items-center mt-12 text-contrast text-title-m">
-          <UiBaseIcon icon="language" class="mr-4" />
-          <UiBaseButton
-            label="рус"
-            type="contrast"
-            @click="switchLocale('ru')"
-          />
-          <div class="mx-2">/</div>
-          <UiBaseButton
-            label="eng"
-            type="contrast"
-            @click="switchLocale('en')"
-          />
-          <div class="mx-2">/</div>
-          <UiBaseButton
-            label="deu"
-            type="contrast"
-            @click="switchLocale('de')"
-          />
-        </div>
+        <!-- <LanguageSwitcher /> -->
       </div>
       <div class="flex flex-col justify-between items-start md:items-end">
         <div class="text-title-m text-contrast mb-12 md:mb-7">

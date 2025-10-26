@@ -5,6 +5,7 @@
 
   --color-background: rgb(208, 201, 181);
   --color-primary: rgb(76, 71, 76);
+  --color-primary-fade: rgba(76, 71, 76, 0.5);
   --color-primary-active: rgb(182, 64, 64);
   --color-contrast: rgba(236, 236, 236, 1);
   --color-indigo: rgba(58, 80, 138, 1);

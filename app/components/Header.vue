@@ -38,7 +38,6 @@
     }
   }
   function search() {
-    console.log(searchQuery.value);
     to("/search?query=" + searchQuery.value);
     searchMode.value = false;
   }
@@ -106,6 +105,7 @@
               :type="isActive('about') ? 'transparent-active' : 'transparent'"
               link="/about"
             />
+            <LanguageSwitcher />
             <UiBaseIcon
               :icon="searchMode ? 'cross' : 'lookingGlass'"
               class="cursor-pointer"

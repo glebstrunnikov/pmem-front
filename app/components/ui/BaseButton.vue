@@ -1,23 +1,26 @@
 <script setup lang="ts">
   const props = defineProps<{
     label: string;
-    type: "transparent" | "transparent-active" | "contrast";
+    type: "transparent" | "transparent-active" | "contrast" | "fade";
     link?: string;
   }>();
-  let styleClass;
-  switch (props.type) {
-    case "transparent":
-      styleClass = "bg-transparent text-title-m text-primary";
-      break;
-    case "transparent-active":
-      styleClass = "bg-transparent-active text-title-m text-primary-active";
-      break;
-    case "contrast":
-      styleClass = "bg-transparent text-contrast text-title-m";
-      break;
-    default:
-      styleClass = "";
-  }
+  const styleClass = computed(() => {
+    switch (props.type) {
+      case "transparent":
+        return "bg-transparent text-title-m text-primary";
+      case "fade":
+        return "bg-transparent text-title-m text-primary-fade";
+
+      case "transparent-active":
+        return "bg-transparent-active text-title-m text-primary-active";
+
+      case "contrast":
+        return "bg-transparent text-contrast text-title-m";
+
+      default:
+        return "";
+    }
+  });
 </script>
 
 <template>
