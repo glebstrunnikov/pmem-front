@@ -114,25 +114,6 @@
     { immediate: true }
   );
 
-  function getHeadingStyle(level: number) {
-    switch (level) {
-      case 1:
-        return "text-title-xxxxl";
-      case 2:
-        return "text-title-xxxl";
-      case 3:
-        return "text-title-xxl";
-      case 4:
-        return "text-title-xl";
-      case 5:
-        return "text-title-l";
-      case 6:
-        return "text-title-m";
-      default:
-        return "text-body-m";
-    }
-  }
-
   const formattedDate = computed(() => {
     if (!data.value.data) return "";
     const date = new Date(data.value.data?.[0]!.publishedAt || new Date());
@@ -150,13 +131,13 @@
       <div>{{ formattedDate }}</div>
       <router-link to="/">{{ `← ${i18n.t("toMainPage")}` }}</router-link>
     </div>
-    <ArticleFrame>
+    <PostArticleFrame>
       <div
         class="w-full flex justify-center items-center max-w-[60%] mb-22 z-10"
       >
         <CardTagCloudCard :tags="data.data?.[0]!.tags" unwrapped />
       </div>
-      <div class="w-full md:w-[60%] mb-20 text-primary text-title-xxl">
+      <div class="w-full md:w-[60%] mb-20 text-primary text-title-xl">
         {{ data.data?.[0]!.title }}
       </div>
       <div class="w-full md:w-[60%] text-title-l mb-6">
@@ -183,87 +164,13 @@
         />
       </div>
 
-      <template v-for="(block, index) in data.data?.[0]!.content" :key="index">
-        <div
-          class="w-full md:w-[60%] mb-2"
-          v-if="
-            block.type === 'paragraph' ||
-            block.type === 'heading' ||
-            block.type === 'quote'
-          "
-        >
-          <div
-            v-if="block.type === 'heading'"
-            :class="getHeadingStyle(block.level) + ' text-primary'"
-          >
-            <TextNode
-              v-for="(child, index) in block.children"
-              :block="child"
-              :key="index"
-            />
-          </div>
-          <p v-if="block.type === 'paragraph'" class="text-title-l-thin">
-            <TextNode
-              v-for="(child, index) in block.children"
-              :block="child"
-              :key="index"
-            />
-          </p>
-          <div
-            v-if="block.type === 'quote'"
-            class="italic text-title-m text-primary-active"
-          >
-            <span>“</span
-            ><TextNode
-              v-for="(child, index) in block.children"
-              :block="child"
-              :key="index"
-            /><span>”</span>
-          </div>
-        </div>
-        <template v-if="block.type === 'code'">
-          <div v-html="block.children[0]!.text"></div>
-        </template>
+      <PostTextArea :content="data.data?.[0]!.content" />
 
-        <template v-if="block.type === 'image'">
-          <img
-            :src="block.image.url"
-            :alt="block.image.name || 'Image'"
-            class="w-full md:w-[80%] mb-2 max-h-[80dvh] object-contain"
-        /></template>
-
-        <template v-if="block.type === 'list'">
-          <ul
-            v-if="block.format === 'unordered'"
-            class="w-full md:w-[60%] text-start text-primary"
-          >
-            <li v-for="(item, idx) in block.children" :key="idx">
-              <TextNode
-                v-for="(child, index) in item.children"
-                :block="child"
-                :key="index"
-              />
-            </li>
-          </ul>
-          <ol
-            v-if="block.format === 'ordered'"
-            class="w-full md:w-[60%] text-start text-primary"
-          >
-            <li v-for="(item, idx) in block.children" :key="idx">
-              <TextNode
-                v-for="(child, index) in item.children"
-                :block="child"
-                :key="index"
-              />
-            </li>
-          </ol>
-        </template>
-      </template>
       <div class="w-full h-46 mt-29 border-t p-20">
         <div class="flex justify-start items-center gap-15 text-body-m">
           <div>{{ i18n.t("share") }}</div>
         </div>
       </div>
-    </ArticleFrame>
+    </PostArticleFrame>
   </div>
 </template>

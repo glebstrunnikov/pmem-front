@@ -16,5 +16,6 @@
   "searchDefault": "Suche nach Überschriften und Text",
   "backToTags": "Zurück zur Tag-Liste",
   "tagsList": "Tag-Liste",
-  "share": "Teilen"
+  "share": "Teilen",
+  "allPostsByTag": "alle Publikationen mit dem Tag"
 }

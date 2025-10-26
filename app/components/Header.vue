@@ -12,6 +12,10 @@
   const isMain = computed(() => {
     return route.fullPath === "/" || route.fullPath === "/index";
   });
+
+  const onTagPage = computed(() => {
+    return route.fullPath.startsWith("/tags/") && !!route.params.slug;
+  });
   const { y: scrollY } = useWindowScroll();
   const scrolled = ref(false);
   watch(scrollY, (newY) => {
@@ -41,11 +45,13 @@
     to("/search?query=" + searchQuery.value);
     searchMode.value = false;
   }
-  watch(route, () => {
+  watch(route, async () => {
     if (!lastSearchQuery.value) {
       hideSearchResults.value = false;
     }
-    searchMode.value = false;
+    if (!onTagPage.value) {
+      searchMode.value = false;
+    }
   });
 </script>
 
@@ -117,22 +123,44 @@
       </div>
       <div v-if="!searchMode && !lastSearchQuery"></div>
       <div
-        v-if="!searchMode && lastSearchQuery && !hideSearchResults"
+        v-if="
+          !searchMode && !hideSearchResults && (!!lastSearchQuery || onTagPage)
+        "
         class="w-full"
       >
         <div class="w-full flex flex-col items-center bg-background">
           <div class="w-full flex items-center mb-7 px-6 sm:px-12 lg:px-18">
-            <div class="flex-1 flex justify-start">
-              <div class="text-title-m text-primary">
+            <div class="flex-1 flex justify-start items-baseline">
+              <div v-if="lastSearchQuery" class="text-title-m text-primary">
                 {{ i18n.t("searchResults") }}
+              </div>
+              <div v-if="onTagPage">
+                <UiBaseBadge class="text-title-m !text-contrast bg-indigo">
+                  {{ route.params.slug }}
+                </UiBaseBadge>
+              </div>
+              <div v-if="onTagPage" class="px-1">—</div>
+              <div
+                v-if="onTagPage"
+                class="text-title-m text-primary whitespace-nowrap"
+              >
+                {{ i18n.t("allPostsByTag") }}
               </div>
             </div>
             <div class="flex-1 flex justify-center">
-              <div class="text-title-m text-tomato">
+              <div v-if="lastSearchQuery" class="text-title-m text-tomato">
                 {{ lastSearchQuery }}
               </div>
+              <div v-if="onTagPage" class="text-title-m text-primary">#</div>
             </div>
-            <div class="flex-1 flex justify-end">
+            <div class="flex-1 flex justify-end items-center">
+              <div v-if="onTagPage">
+                <UiBaseBadge
+                  class="mr-10 cursor-pointer"
+                  @click="jumpToSearch"
+                  >{{ i18n.t("searchDefault") }}</UiBaseBadge
+                >
+              </div>
               <UiBaseIcon
                 icon="cross"
                 class="cursor-pointer"

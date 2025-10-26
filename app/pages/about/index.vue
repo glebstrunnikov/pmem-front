@@ -43,7 +43,7 @@
             :key="idx"
             class="mb-6"
           >
-            <TextNode
+            <PostTextNode
               v-for="(child, i) in pg.children"
               :key="i"
               :block="child"

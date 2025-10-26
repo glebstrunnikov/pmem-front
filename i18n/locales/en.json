@@ -16,5 +16,6 @@
   "searchDefault": "Search by titles and text",
   "backToTags": "Back to tags list",
   "tagsList": "Tags List",
-  "share": "Share"
+  "share": "Share",
+  "allPostsByTag": "all posts by tag"
 }

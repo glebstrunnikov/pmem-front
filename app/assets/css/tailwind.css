@@ -2,7 +2,6 @@
 
 @theme {
   --color-tomato: #ff5733;
-
   --color-background: rgb(208, 201, 181);
   --color-primary: rgb(76, 71, 76);
   --color-primary-fade: rgba(76, 71, 76, 0.5);
@@ -15,19 +14,23 @@
   --font-title: "Manrope", sans-serif;
 }
 @layer component {
-  .text-title-xxxxl {
+  .text-title-xxxxxl {
     font-size: 64px;
     font-weight: 800;
   }
+  .text-title-xxxxl {
+    font-size: 64px;
+    font-weight: 700;
+  }
   .text-title-xxxl {
     font-size: 48px;
-    font-weight: 800;
-  }
-  .text-title-xxl {
-    font-size: 40px;
     font-weight: 700;
   }
   .text-title-xxl {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .text-title-xl {
     font-size: 32px;
     font-weight: 700;
   }

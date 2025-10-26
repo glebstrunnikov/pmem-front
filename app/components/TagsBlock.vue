@@ -9,7 +9,7 @@
     v-if="letter && tags.length"
     class="w-full flex flex-col items-start mb-8"
   >
-    <div class="text-title-xxl text-primary mb-5">
+    <div class="text-title-xl text-primary mb-5">
       {{ letter + letter.toLowerCase() }}
     </div>
     <div class="flex flex-wrap gap-y-10 gap-x-3">
