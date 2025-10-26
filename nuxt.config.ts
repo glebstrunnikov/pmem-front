@@ -34,10 +34,10 @@ export default defineNuxtConfig({
         },
         { property: "og:site_name", content: "Perm Memorial — Europa" },
         { property: "og:type", content: "website" },
-        {
-          property: "og:image",
-          content: `${process.env.NUXT_PUBLIC_URL}/logo.png`,
-        },
+        // {
+        //   property: "og:image",
+        //   content: `${process.env.NUXT_PUBLIC_URL}/logo.png`,
+        // },
         { name: "twitter:card", content: "summary_large_image" },
       ],
     },

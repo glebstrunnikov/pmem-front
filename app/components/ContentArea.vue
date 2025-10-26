@@ -86,11 +86,11 @@
     meta: [
       {
         property: "og:image",
-        content: `${config.public.url}/logo.png`,
+        content: `${config.public.url}/smlogo.png`,
       },
       {
         name: "twitter:image",
-        content: `${config.public.url}/logo.png`,
+        content: `${config.public.url}/smlogo.png`,
       },
     ],
   });
