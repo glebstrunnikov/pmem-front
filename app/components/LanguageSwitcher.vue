@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="flex items-center mt-12 text-primary-fade text-title-m">
+  <div class="flex justify-centeritems-center text-primary-fade text-title-m">
     <UiBaseIcon icon="language" color="rgba(76, 71, 76, 0.5)" class="mr-4" />
     <UiBaseButton
       label="рус"

@@ -65,53 +65,47 @@
           </div>
         </div>
 
-        <div>
-          <div
-            class="md:hidden flex justify-end"
-            :class="showMobileMenu ? 'mb-6' : ''"
-          >
-            <UiBaseIcon
-              :icon="showMobileMenu ? 'cross' : 'burger'"
-              class="cursor-pointer"
-              @click="showMobileMenu = !showMobileMenu"
-            />
-          </div>
-          <div
-            class="flex flex-col md:flex-row items-end md:items-center gap-6 lg:gap-28 transition-all duration-300 md:opacity-100 md:max-h-96"
-            :class="
-              showMobileMenu
-                ? 'opacity-100 max-h-96'
-                : 'opacity-0 max-h-0 overflow-hidden md:flex'
+        <div
+          class="md:hidden flex justify-end"
+          :class="showMobileMenu ? 'mb-6' : ''"
+        >
+          <UiBaseIcon
+            :icon="showMobileMenu ? 'cross' : 'burger'"
+            class="cursor-pointer"
+            @click="showMobileMenu = !showMobileMenu"
+          />
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-end justify-center md:items-center transition-all duration-300 md:opacity-100 md:max-h-96"
+          :class="
+            showMobileMenu
+              ? 'opacity-100 max-h-96'
+              : 'opacity-0 max-h-0 overflow-hidden md:flex'
+          "
+        >
+          <UiBaseButton
+            :label="i18n.t('news')"
+            :type="
+              isActive('posts') || isMain ? 'transparent-active' : 'transparent'
             "
-          >
-            <UiBaseButton
-              :label="i18n.t('news')"
-              :type="
-                isActive('posts') || isMain
-                  ? 'transparent-active'
-                  : 'transparent'
-              "
-              link="/"
-            />
-            <UiBaseButton
-              :label="i18n.t('projects')"
-              :type="
-                isActive('projects') ? 'transparent-active' : 'transparent'
-              "
-              link="/projects"
-            />
-            <UiBaseButton
-              :label="i18n.t('about')"
-              :type="isActive('about') ? 'transparent-active' : 'transparent'"
-              link="/about"
-            />
-            <LanguageSwitcher />
-            <UiBaseIcon
-              :icon="searchMode ? 'cross' : 'lookingGlass'"
-              class="cursor-pointer"
-              @click="jumpToSearch"
-            />
-          </div>
+            link="/"
+          />
+          <UiBaseButton
+            :label="i18n.t('projects')"
+            :type="isActive('projects') ? 'transparent-active' : 'transparent'"
+            link="/projects"
+          />
+          <UiBaseButton
+            :label="i18n.t('about')"
+            :type="isActive('about') ? 'transparent-active' : 'transparent'"
+            link="/about"
+          />
+          <LanguageSwitcher />
+          <UiBaseIcon
+            :icon="searchMode ? 'cross' : 'lookingGlass'"
+            class="cursor-pointer"
+            @click="jumpToSearch"
+          />
         </div>
       </div>
       <div v-if="!searchMode && !lastSearchQuery"></div>
