@@ -53,36 +53,43 @@
   <div class="flex flex-col w-full bg-background z-30 sticky top-0">
     <div class="w-full flex flex-col justify-between bg-background z-30">
       <div
-        class="flex justify-between w-full px-6 sm:px-12 md:px-18 transition-all duration-300 pt-5 pb-9 items-center"
-        :class="scrolled ? '' : 'md:pt-20 md:pb-29'"
+        class="flex justify-between w-full px-6 sm:px-12 lg:px-18 transition-all duration-300 pt-5 pb-9 items-center"
+        :class="scrolled ? '' : 'lg:pt-20 lg:pb-29'"
       >
         <div class="flex items-center">
           <router-link to="/">
-            <img class="mr-24" :src="logo" alt="" />
+            <img class="mr-6 h-15" :src="logo" alt="" />
           </router-link>
-          <div class="font-title text-title-xxl text-primary hidden md:block">
+          <div class="font-title text-title-l text-primary hidden lg:block">
             <router-link to="/">{{ i18n.t("orgName") }}</router-link>
           </div>
         </div>
-
+        <div class="flex-grow"></div>
         <div
-          class="md:hidden flex justify-end"
+          class="lg:hidden flex justify-end"
           :class="showMobileMenu ? 'mb-6' : ''"
         >
           <UiBaseIcon
             :icon="showMobileMenu ? 'cross' : 'burger'"
             class="cursor-pointer"
+            :class="showMobileMenu ? 'max-lg:hidden' : ''"
             @click="showMobileMenu = !showMobileMenu"
           />
         </div>
         <div
-          class="flex flex-col md:flex-row items-end justify-center md:items-center transition-all duration-300 md:opacity-100 md:max-h-96"
+          class="lg:w-full flex flex-col lg:flex-row items-end justify-between lg:items-center transition-all duration-300 lg:opacity-100 lg:max-h-96 max-w-200"
           :class="
             showMobileMenu
-              ? 'opacity-100 max-h-96'
-              : 'opacity-0 max-h-0 overflow-hidden md:flex'
+              ? 'opacity-100 max-h-96 max-lg:gap-6'
+              : 'opacity-0 max-h-0 w-0 overflow-hidden lg:flex'
           "
         >
+          <UiBaseIcon
+            icon="cross"
+            class="cursor-pointer"
+            :class="showMobileMenu ? 'lg:hidden' : 'hidden'"
+            @click="showMobileMenu = !showMobileMenu"
+          />
           <UiBaseButton
             :label="i18n.t('news')"
             :type="
@@ -114,7 +121,7 @@
         class="w-full"
       >
         <div class="w-full flex flex-col items-center bg-background">
-          <div class="w-full flex items-center mb-7 px-6 sm:px-12 md:px-18">
+          <div class="w-full flex items-center mb-7 px-6 sm:px-12 lg:px-18">
             <div class="flex-1 flex justify-start">
               <div class="text-title-m text-primary">
                 {{ i18n.t("searchResults") }}
@@ -139,7 +146,7 @@
       <div v-if="searchMode" class="w-full flex flex-col items-center">
         <form
           @submit.prevent="search"
-          class="w-full flex gap-10 items-center mb-7 px-6 sm:px-12 md:px-18"
+          class="w-full flex gap-10 items-center mb-7 px-6 sm:px-12 lg:px-18"
         >
           <div class="text-title-m text-primary flex-999">
             <input
@@ -150,7 +157,7 @@
               class="w-full focus:outline-none focus:border-primary focus:border-[1px]"
             />
           </div>
-          <UiBaseBadge class="hidden md:block"
+          <UiBaseBadge class="hidden lg:block"
             ><router-link to="/tags">{{
               i18n.t("searchByTag")
             }}</router-link></UiBaseBadge
@@ -161,7 +168,7 @@
             @click="search"
           />
         </form>
-        <UiBaseBadge class="block md:hidden mb-6"
+        <UiBaseBadge class="block lg:hidden mb-6"
           ><router-link to="/tags">{{
             i18n.t("searchByTag")
           }}</router-link></UiBaseBadge
