@@ -82,6 +82,18 @@
     },
     { immediate: true }
   );
+  useHead({
+    meta: [
+      {
+        property: "og:image",
+        content: `${config.public.url}/logo.png`,
+      },
+      {
+        name: "twitter:image",
+        content: `${config.public.url}/logo.png`,
+      },
+    ],
+  });
 
   const loadMore = () => {
     page.value++;
