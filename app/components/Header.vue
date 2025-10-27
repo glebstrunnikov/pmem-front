@@ -16,15 +16,16 @@
   const onTagPage = computed(() => {
     return route.fullPath.startsWith("/tags/") && !!route.params.slug;
   });
-  const { y: scrollY } = useWindowScroll();
-  const scrolled = ref(false);
-  watch(scrollY, (newY) => {
-    if (newY > 140) {
-      scrolled.value = true;
-    } else if (newY === 0) {
-      scrolled.value = false;
-    }
-  });
+  // const { y: scrollY } = useWindowScroll();
+  // const scrolled = ref(false);
+  // watch(scrollY, (newY) => {
+  //   if (newY > 140) {
+  //     scrolled.value = true;
+  //   } else if (newY === 0) {
+  //     scrolled.value = false;
+  //   }
+  // });
+  const scrolled = true;
   const i18n = useI18n();
   const searchMode = ref(false);
   const searchQuery = ref("");

@@ -12,10 +12,10 @@
       <img :src="LogoBackground" alt="" />
     </div>
     <div
-      class="w-full flex flex-col justify-center items-center text-center sh-[50dvh] relative"
+      class="w-full flex flex-col justify-center items-center text-center h-[80dvh] relative"
     >
       <div class="text-title-mega italic text-primary-active">404</div>
-      <div class="text-title-mono text-primary-active mb-6">
+      <div class="text-title-mono text-primary-active">
         {{ `(error:${i18n.t("pageNotFound")})` }}
       </div>
       <div class="text-title-xl text-primary mb-4">
