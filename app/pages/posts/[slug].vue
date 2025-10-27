@@ -88,7 +88,7 @@
         console.log("no data");
         if (localeLoopCounter.value > 2) {
           localeLoopCounter.value = 0;
-          navigate(`/`);
+          navigate(`/404`);
           return;
         }
 

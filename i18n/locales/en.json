@@ -17,5 +17,6 @@
   "backToTags": "Back to tags list",
   "tagsList": "Tags List",
   "share": "Share",
-  "allPostsByTag": "all posts by tag"
+  "allPostsByTag": "all posts by tag",
+  "pageNotFound": "page not found"
 }

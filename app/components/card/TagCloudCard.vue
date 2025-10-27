@@ -49,7 +49,7 @@
         @click.prevent="tagsLongShown = !tagsLongShown"
         @mouseenter="$emit('tag-hovered')"
         @mouseleave="$emit('tag-unhovered')"
-        styleClass="bg-white border text-black !rounded-full !p-0 flex justify-center items-center w-8 h-8"
+        styleClass="bg-white border text-black !rounded-full !p-0 flex justify-center items-center w-8 h-8  border-none"
       >
         <UiBaseIcon
           class="w-[10px] flex justify-center text-center"

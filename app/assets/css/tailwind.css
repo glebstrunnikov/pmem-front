@@ -15,8 +15,13 @@
 
   --font-sans: "Open Sans", sans-serif;
   --font-title: "Manrope", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 @layer component {
+  .text-title-mega {
+    font-size: 200px;
+    font-weight: 700;
+  }
   .text-title-xxxxl {
     font-size: 64px;
     font-weight: 800;
@@ -24,6 +29,11 @@
   .text-title-xxxl {
     font-size: 64px;
     font-weight: 700;
+  }
+  .text-title-mono {
+    font-size: 50px;
+    font-weight: 400;
+    font-family: var(--font-mono);
   }
   .text-title-xxl {
     font-size: 48px;
