@@ -40,7 +40,6 @@
     } else {
       searchMode.value = false;
     }
-    showMobileMenu.value = false;
   }
   function search() {
     to("/search?query=" + searchQuery.value);
@@ -53,6 +52,7 @@
     if (!onTagPage.value) {
       searchMode.value = false;
     }
+    showMobileMenu.value = false;
   });
 </script>
 
@@ -175,7 +175,7 @@
       <div v-if="searchMode" class="w-full flex flex-col items-center">
         <form
           @submit.prevent="search"
-          class="w-full flex gap-10 items-center mb-7 px-6 sm:px-12 lg:px-18"
+          class="w-full flex gap-10 items-center mb-8 px-6 sm:px-12 lg:px-18"
         >
           <div class="text-title-m text-primary flex-999">
             <input
@@ -202,10 +202,10 @@
             i18n.t("searchByTag")
           }}</router-link></UiBaseBadge
         >
-        <div class="w-full h-[2px] bg-black"></div>
+        <div class="w-[88%] h-[2px] bg-black mb-19 max-md:hidden"></div>
       </div>
 
-      <div class="h-[1px] w-full bg-black border-none"></div>
+      <div class="h-[2px] w-full bg-black border-none"></div>
     </div>
   </div>
 </template>
