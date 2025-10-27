@@ -8,6 +8,18 @@
   const locale = useState("locale");
   const tempLocale = ref(locale.value);
   const localeLoopCounter = ref(0);
+  import { getRandomColorStyle } from "@/utils/getRandomColorStyle";
+  // function getRandomColorStyle(str: string, tagName: string) {
+  //   if (["статья", "article", "artikel"].includes(tagName.toLowerCase())) {
+  //     return "indigo";
+  //   }
+  //   if (["видео", "video"].includes(tagName.toLowerCase())) {
+  //     return "brick";
+  //   }
+  //   const palette = ["indigo", "brick", "jungle", "clay", "slate"];
+  //   const letterNumber = tagName!.charCodeAt(0) % palette.length;
+  //   return str + palette[letterNumber];
+  // }
 
   interface PostData {
     data: Post[];
@@ -125,6 +137,7 @@
 </script>
 
 <template>
+  <!-- text-indigo text-brick text-jungle text-clay text-slate -->
   <div v-if="data?.data.length" class="w-full pb-20 bg-background relative">
     <div class="w-full my-6 text-body-m flex justify-between items-center">
       <div class="max-w-100">{{ data.data?.[0]!.title }}</div>
@@ -135,7 +148,7 @@
       <div
         class="w-full flex justify-center items-center max-w-[60%] mb-22 z-10"
       >
-        <CardTagCloudCard :tags="data.data?.[0]!.tags" unwrapped />
+        <!-- <CardTagCloudCard :tags="data.data?.[0]!.tags" unwrapped /> -->
       </div>
       <div class="w-full md:w-[60%] mb-20 text-primary text-title-xl">
         {{ data.data?.[0]!.title }}
@@ -165,6 +178,22 @@
       </div>
 
       <PostTextArea :content="data.data?.[0]!.content" />
+
+      <div v-if="data.data?.[0]!.tags" class="w-full md:w-[60%] mt-3 mb-30">
+        <div class="w-full h-[1px] bg-black mb-10"></div>
+        <div class="flex flex-wrap gap-6">
+          <div
+            class="text-title-l-thick"
+            :class="getRandomColorStyle('text-', tag.name)"
+            v-for="(tag,idx) in data.data?.[0]!.tags"
+            :key="idx"
+          >
+            <router-link :to="`/tags/${tag.slug}`">
+              {{ `#${tag.name}` }}</router-link
+            >
+          </div>
+        </div>
+      </div>
 
       <div class="w-full h-46 mt-29 border-t p-20">
         <div class="flex justify-start items-center gap-15 text-body-m">

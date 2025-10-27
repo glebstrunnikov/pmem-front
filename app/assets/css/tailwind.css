@@ -16,6 +16,7 @@
   --font-sans: "Open Sans", sans-serif;
   --font-title: "Manrope", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+  --breakpoint-lg: 1080px;
 }
 @layer component {
   .text-title-mega {
@@ -51,6 +52,10 @@
     font-size: 24px;
     font-weight: 700;
   }
+  .text-title-l-thick {
+    font-size: 24px;
+    font-weight: 600;
+  }
   .text-title-l-thin {
     font-size: 24px;
     font-weight: 400;
@@ -72,9 +77,7 @@
     font-weight: 600;
   }
 }
-@theme {
-  --breakpoint-lg: 1080px;
-}
+
 @layer base {
   ul {
     list-style-type: none;
