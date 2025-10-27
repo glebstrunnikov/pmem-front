@@ -1,7 +1,7 @@
 <script setup lang="ts">
   withDefaults(
     defineProps<{
-      name: string;
+      name?: string;
       slug?: string;
       styleClass?: string;
     }>(),
@@ -24,6 +24,7 @@
     class="px-5 py-2 rounded-2xl overflow-hidden border z-60 pointer-events-auto whitespace-nowrap"
     :class="styleClass"
   >
-    {{ name }}
+    <div v-if="name">{{ name }}</div>
+    <slot v-else></slot>
   </div>
 </template>

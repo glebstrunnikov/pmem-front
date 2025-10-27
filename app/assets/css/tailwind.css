@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-tomato: #ff5733;
+  --color-tomato: rgba(255, 87, 51, 1);
   --color-background: rgb(208, 201, 181);
   --color-primary: rgb(76, 71, 76);
   --color-primary-fade: rgba(76, 71, 76, 0.5);
@@ -9,6 +9,9 @@
   --color-contrast: rgba(236, 236, 236, 1);
   --color-indigo: rgba(58, 80, 138, 1);
   --color-brick: rgba(138, 58, 58, 1);
+  --color-jungle: rgba(48, 120, 90, 1);
+  --color-clay: rgba(165, 113, 85, 1);
+  --color-slate: rgba(59, 59, 59, 1);
 
   --font-sans: "Open Sans", sans-serif;
   --font-title: "Manrope", sans-serif;
