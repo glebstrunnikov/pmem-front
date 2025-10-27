@@ -72,6 +72,9 @@
     font-weight: 600;
   }
 }
+@theme {
+  --breakpoint-lg: 1080px;
+}
 @layer base {
   ul {
     list-style-type: none;

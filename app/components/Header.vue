@@ -64,17 +64,19 @@
         class="flex justify-between w-full px-6 sm:px-12 lg:px-18 transition-all duration-300 pt-5 pb-9 items-center"
         :class="scrolled ? '' : 'lg:pt-20 lg:pb-29'"
       >
-        <div class="flex items-center">
+        <div class="flex items-center flex-shrink-0">
           <router-link to="/">
-            <img class="mr-6 h-15" :src="logo" alt="" />
+            <img class="h-15 w-15" :src="logo" alt="" />
           </router-link>
-          <div class="font-title text-title-l text-primary hidden lg:block">
+          <div
+            class="font-title text-title-l text-primary hidden lg:block whitespace-nowrap mx-6"
+          >
             <router-link to="/">{{ i18n.t("orgName") }}</router-link>
           </div>
         </div>
         <div class="flex-grow"></div>
         <div
-          class="lg:hidden flex justify-end"
+          class="lg:hidden flex justify-end flex-shrink"
           :class="showMobileMenu ? 'mb-6' : ''"
         >
           <UiBaseIcon
