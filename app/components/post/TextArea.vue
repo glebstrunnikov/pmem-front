@@ -4,19 +4,19 @@
   function getHeadingStyle(level: number) {
     switch (level) {
       case 1:
-        return "text-title-xxxxxl text-primary-active";
+        return "text-title-xxxxl text-primary-active";
       case 2:
-        return "text-title-xxxxxl text-primary";
-      case 3:
         return "text-title-xxxxl text-primary";
-      case 4:
+      case 3:
         return "text-title-xxxl text-primary";
-      case 5:
+      case 4:
         return "text-title-xxl text-primary";
+      case 5:
+        return "text-title-xl text-primary";
       case 6:
         return "text-title-l text-primary";
       default:
-        return "";
+        return "text-body-m text-primary";
     }
   }
 </script>
@@ -49,7 +49,7 @@
       </p>
       <div
         v-if="block.type === 'quote'"
-        class="italic text-title-m text-primary-active"
+        class="italic text-title-xl text-primary-active"
       >
         <span>“</span
         ><PostTextNode
@@ -73,7 +73,7 @@
     <template v-if="block.type === 'list'">
       <ul
         v-if="block.format === 'unordered'"
-        class="w-full md:w-[60%] text-start text-primary"
+        class="w-full md:w-[60%] text-start text-title-l-thin text-primary"
       >
         <li v-for="(item, idx) in block.children" :key="idx">
           <PostTextNode
@@ -85,7 +85,7 @@
       </ul>
       <ol
         v-if="block.format === 'ordered'"
-        class="w-full md:w-[60%] text-start text-primary"
+        class="w-full md:w-[60%] text-start text-title-l-thin text-primary"
       >
         <li v-for="(item, idx) in block.children" :key="idx">
           <PostTextNode

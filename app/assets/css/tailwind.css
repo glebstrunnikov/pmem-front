@@ -14,19 +14,19 @@
   --font-title: "Manrope", sans-serif;
 }
 @layer component {
-  .text-title-xxxxxl {
+  .text-title-xxxxl {
     font-size: 64px;
     font-weight: 800;
   }
-  .text-title-xxxxl {
+  .text-title-xxxl {
     font-size: 64px;
     font-weight: 700;
   }
-  .text-title-xxxl {
+  .text-title-xxl {
     font-size: 48px;
     font-weight: 700;
   }
-  .text-title-xxl {
+  .text-title-xl {
     font-size: 36px;
     font-weight: 700;
   }
@@ -67,8 +67,8 @@
   ul li::before {
     content: "";
     display: inline-block;
-    width: 3.5px; /* Exact pixel size ye want */
-    height: 3.5px;
+    width: 5px; /* Exact pixel size ye want */
+    height: 5px;
     background-color: currentColor;
     border-radius: 50%;
     margin-right: 0.75em;

@@ -40,6 +40,7 @@
     } else {
       searchMode.value = false;
     }
+    showMobileMenu.value = false;
   }
   function search() {
     to("/search?query=" + searchQuery.value);

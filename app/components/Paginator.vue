@@ -14,7 +14,7 @@
         : 'hover:bg-indigo  text-indigo hover:text-contrast'
     "
   >
-    <div :class="isLoading ? 'text-title-xxxl' : 'text-title-l'">
+    <div :class="isLoading ? 'text-title-xxl' : 'text-title-l'">
       {{ isLoading ? i18n.t("loading") : i18n.t("loadMore") }}
     </div>
   </div>
