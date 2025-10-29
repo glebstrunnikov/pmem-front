@@ -26,7 +26,10 @@ const i18n = useI18n();
     <div class="ml-9 mr-8 md:ml-45 md:mr-40 mb-20 md:mb-40 relative">
       <img class="w-full" :src="InCaptivity" alt="" />
       <div class="md:absolute left-[18%] bottom-[15%] text-title-m">
-        <router-link to="/in-captivity">{{ `${i18n.t("toProjectPage")} →` }}</router-link>
+        <!-- <router-link to="/in-captivity">{{ `${i18n.t("toProjectPage")} →` }}</router-link> -->
+        <a href="http://pmem.ru/index.php?id=9803">{{
+          `${i18n.t("toProjectPage")} →` }}</a>
+
       </div>
     </div>
   </div>
