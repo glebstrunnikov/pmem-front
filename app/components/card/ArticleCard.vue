@@ -6,13 +6,11 @@
       description?: string | null;
       date: string;
       link?: string;
-      tags: Tag[];
+      tags?: Tag[];
     }>(),
     {
       imageUrl: "",
       title: "Post name",
-      description:
-        "Post description lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       date: "2025-09-23T18:12:15.374Z",
       link: "",
     }
@@ -74,6 +72,7 @@
           </div>
           <div class="relative w-full">
             <CardTagCloudCard
+              v-if="tags"
               class="absolute top-0 flex flex-wrap z-50"
               @tag-hovered="toggleTagHover(true)"
               @tag-unhovered="toggleTagHover(false)"

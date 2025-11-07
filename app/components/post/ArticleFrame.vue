@@ -1,5 +1,8 @@
 <script setup lang="ts">
   const i18n = useI18n();
+  defineProps<{
+    parentClass?: string;
+  }>();
 </script>
 
 <template>
@@ -9,6 +12,7 @@
 
   <div
     class="md:border rounded-4xl flex flex-col items-center pt-29 relative z-20 bg-background"
+    :class="parentClass"
   >
     <slot></slot>
   </div>
