@@ -18,7 +18,7 @@
   const formattedDate = computed(() => {
     if (!props.date) return "";
     const date = new Date(props.date);
-    return `${date.getDate()}/${date.getMonth() + 1}/${date
+    return `${date.getDate()} / ${date.getMonth() + 1} / ${date
       .getFullYear()
       .toString()
       .slice(-2)}`;
@@ -44,7 +44,7 @@
       @mouseleave="toggleAreaHover(false)"
     >
       <div
-        class="w-[44%] h-full border rounded-tl-4xl rounded-bl-4xl overflow-hidden"
+        class="w-[44%] h-full border border-[2px] rounded-tl-4xl rounded-bl-4xl overflow-hidden"
       >
         <img
           v-if="imageUrl"
@@ -54,14 +54,14 @@
         />
       </div>
       <div
-        class="w-[56%] h-full flex justify-center items-center relative rounded-tr-4xl rounded-br-4xl border border-l-0"
+        class="w-[56%] h-full flex justify-center items-center relative rounded-tr-4xl rounded-br-4xl border border-[2px] border-l-0"
         :class="hoverOn ? 'bg-contrast' : 'bg-background'"
       >
         <div class="flex flex-col items-start w-[70%] h-[80%] z-10">
           <div class="text-title-l mb-3 w-full text-left">
             {{ title }}
           </div>
-          <div class="text-body-xxs mb-5 w-full text-left">
+          <div class="text-body-xxs text-primary mb-5 w-full text-left">
             {{ formattedDate }}
           </div>
           <div

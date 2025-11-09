@@ -7,11 +7,11 @@
 
 <template>
   <div
-    class="w-[150%] h-[1px] max-md:hidden -ml-20 bg-black absolute top-80 z-10"
+    class="w-[150%] h-[2px] max-md:hidden -ml-20 bg-black absolute top-80 z-10"
   ></div>
 
   <div
-    class="md:border rounded-4xl flex flex-col items-center pt-29 relative z-20 bg-background"
+    class="md:border md:border-[2px] rounded-4xl flex flex-col items-center pt-29 relative z-20 bg-background"
     :class="parentClass"
   >
     <slot></slot>

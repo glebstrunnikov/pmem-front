@@ -181,6 +181,7 @@ declare global {
     localizations: PostLocalization[];
     video: StrapiMedia | null;
     tags: Tag[];
+    subtitle: string | null;
   }
 
   /**

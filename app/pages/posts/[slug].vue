@@ -15,7 +15,7 @@
   }
   const { data, error, pending } = useFetch<PostData>(
     () =>
-      `/posts?filters[slug][$eq]=${slug}&locale=${tempLocale.value}&populate=cover`,
+      `/posts?filters[slug][$eq]=${slug}&locale=${tempLocale.value}&populate=*`,
     {
       baseURL: config.public.apiBase,
       watch: [tempLocale],
@@ -23,9 +23,11 @@
   );
 
   watch(locale, (newLocale) => {
+    console.log(data.value?.data[0]);
     const otherLocaleVersion = data.value?.data[0]?.localizations.find(
       (loc) => loc.locale === newLocale
     );
+
     if (otherLocaleVersion) {
       navigate(`/posts/${otherLocaleVersion.slug}`);
     }
@@ -84,9 +86,7 @@
   watch(
     data,
     (val) => {
-      console.log("Data received:", val);
       if (val?.data && val.data?.length === 0) {
-        console.log("no data");
         if (localeLoopCounter.value > 2) {
           localeLoopCounter.value = 0;
           navigate(`/404`);
@@ -118,7 +118,7 @@
   const formattedDate = computed(() => {
     if (!data.value.data) return "";
     const date = new Date(data.value.data?.[0]!.publishedAt || new Date());
-    return `${date.getDate()}/${date.getMonth() + 1}/${date
+    return `${date.getDate()} / ${date.getMonth() + 1} / ${date
       .getFullYear()
       .toString()
       .slice(-2)}`;
@@ -128,21 +128,21 @@
 <template>
   <!-- text-indigo text-brick text-jungle text-clay text-slate -->
   <div v-if="data?.data.length" class="w-full pb-20 bg-background relative">
-    <div class="w-full my-6 text-body-m flex justify-between items-center">
-      <div class="max-w-100">{{ data.data?.[0]!.title }}</div>
-      <div>{{ formattedDate }}</div>
-      <router-link to="/">{{ `← ${i18n.t("toMainPage")}` }}</router-link>
+    <div class="w-full my-6 text-body-m flex items-center">
+      <div class="flex-1 text-left">{{ data.data?.[0]!.title }}</div>
+      <div class="flex-1 text-center">{{ formattedDate }}</div>
+      <div class="flex-1 text-right">
+        <router-link to="/">{{ `← ${i18n.t("toMainPage")}` }}</router-link>
+      </div>
     </div>
     <PostArticleFrame>
       <div
-        class="w-full flex justify-center items-center max-w-[60%] mb-22 z-10"
+        class="w-full flex justify-center items-center max-w-[60%] mb-5 z-10"
       ></div>
       <div class="w-full md:w-[60%] mb-20 text-primary text-title-xl">
         {{ data.data?.[0]!.title }}
       </div>
-      <div class="w-full md:w-[60%] text-title-l mb-6">
-        {{ data.data?.[0]!.lead }}
-      </div>
+
       <div
         v-if="data.data?.[0]!.video"
         class="w-full md:w-[60%] mb-10 max-h-[80dvh]"
@@ -163,7 +163,12 @@
           class="max-h-[80dvh] object-cover"
         />
       </div>
-
+      <div
+        v-if="data.data?.[0]!.lead"
+        class="w-full md:w-[60%] text-title-l mb-6"
+      >
+        {{ data.data?.[0]!.lead }}
+      </div>
       <PostTextArea :content="data.data?.[0]!.content" />
 
       <div v-if="data.data?.[0]!.tags" class="w-full md:w-[60%] mt-20 mb-30">
