@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      title: "Perm Memorial — Europa",
       link: [
         {
           rel: "icon",
