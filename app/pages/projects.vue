@@ -64,5 +64,4 @@
       </div>
     </template>
   </div>
-  {{ data }}
 </template>
