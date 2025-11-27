@@ -3,7 +3,7 @@
   const page = ref(1);
   const firstPosts = ref<Post[]>([]);
   const additionalPosts = ref<Post[]>([]);
-  const showPagnator = useState("showPagnator", () => true);
+  const showPagnator = ref(true);
   const locale = useState("locale");
   const route = useRoute();
   const i18n = useI18n();
@@ -56,14 +56,9 @@
       return [...firstPosts.value, ...additionalPosts.value];
     }
   });
-  watch(locale, () => {
+  watch([locale, query, sort], () => {
     page.value = 1;
-  });
-  watch(query, () => {
-    page.value = 1;
-  });
-  watch(sort, () => {
-    page.value = 1;
+    additionalPosts.value = [];
   });
   watch(
     data,
@@ -131,7 +126,7 @@
         v-for="post in allPosts"
         :key="post.id"
         :title="post.title"
-        :description="post.lead"
+        :description="post.subtitle"
         :imageUrl="imageUrl(post)"
         :date="post.publishedAt"
         :link="'/posts/' + post.slug"
