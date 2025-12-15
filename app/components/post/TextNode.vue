@@ -28,7 +28,7 @@
       rel="noopener noreferrer"
       class="text-indigo hover:underline"
     >
-      <TextNode v-for="(child, i) in block.children" :key="i" :block="child" />
+      <PostTextNode v-for="(child, i) in block.children" :key="i" :block="child" />
     </a>
   </span>
   <slot></slot>

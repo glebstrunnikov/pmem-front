@@ -2375,5 +2375,326 @@
       "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 12 }
     }
   },
-  { "data": [ { "id": 12, "documentId": "tjdz4x6duyi8zq0ka8pc31wm", "slug": "karta-gula-ga-v-prikame", "title": "Карта ГУЛАГа в Прикамье", "link": "https://map.pmem-europa.de", "createdAt": "2025-11-09T15:18:04.312Z", "updatedAt": "2025-11-09T15:20:51.435Z", "publishedAt": "2025-11-09T15:20:51.463Z", "locale": "ru", "cover": { "id": 71, "documentId": "hsyagawup1h185hzlmuiydgc", "name": "map-ru.png", "alternativeText": null, "caption": null, "width": 3856, "height": 1078, "formats": { "large": { "ext": ".png", "url": "/uploads/large_map_ru_1275d861a1.png", "hash": "large_map_ru_1275d861a1", "mime": "image/png", "name": "large_map-ru.png", "path": null, "size": 168.88, "width": 1000, "height": 280, "sizeInBytes": 168876 }, "small": { "ext": ".png", "url": "/uploads/small_map_ru_1275d861a1.png", "hash": "small_map_ru_1275d861a1", "mime": "image/png", "name": "small_map-ru.png", "path": null, "size": 59.55, "width": 500, "height": 140, "sizeInBytes": 59545 }, "medium": { "ext": ".png", "url": "/uploads/medium_map_ru_1275d861a1.png", "hash": "medium_map_ru_1275d861a1", "mime": "image/png", "name": "medium_map-ru.png", "path": null, "size": 110.4, "width": 750, "height": 210, "sizeInBytes": 110402 }, "thumbnail": { "ext": ".png", "url": "/uploads/thumbnail_map_ru_1275d861a1.png", "hash": "thumbnail_map_ru_1275d861a1", "mime": "image/png", "name": "thumbnail_map-ru.png", "path": null, "size": 21.09, "width": 245, "height": 68, "sizeInBytes": 21091 } }, "hash": "map_ru_1275d861a1", "ext": ".png", "mime": "image/png", "size": 404.99, "url": "/uploads/map_ru_1275d861a1.png", "previewUrl": null, "provider": "local", "provider_metadata": null, "createdAt": "2025-11-09T15:17:32.749Z", "updatedAt": "2025-11-09T15:17:32.749Z", "publishedAt": "2025-11-09T15:17:32.750Z" }, "localizations": [ { "id": 13, "documentId": "tjdz4x6duyi8zq0ka8pc31wm", "slug": "gulag-map-of-the-kama-region", "title": "GULAG-Map of the Kama Region", "link": "https://map.pmem-europa.de", "createdAt": "2025-11-09T15:19:35.455Z", "updatedAt": "2025-11-09T15:21:02.580Z", "publishedAt": "2025-11-09T15:21:02.645Z", "locale": "en" }, { "id": 14, "documentId": "tjdz4x6duyi8zq0ka8pc31wm", "slug": "gulag-karte-des-kama-gebiets", "title": "GULAG-Karte des Kama-Gebiets", "link": "https://map.pmem-europa.de", "createdAt": "2025-11-09T15:18:20.298Z", "updatedAt": "2025-11-09T15:21:17.944Z", "publishedAt": "2025-11-09T15:21:17.966Z", "locale": "de" } ] }, { "id": 21, "documentId": "e3v9lwlnqzodz23wyzatt5t2", "slug": "ustnaya-istoriya", "title": "Устная история", "link": "https://www.youtube.com/watch?v=XDivoFPNs80&list=PLRVpD1oy68rc4HISAx4h2AOC57gLck_vC", "createdAt": "2025-11-09T15:23:35.109Z", "updatedAt": "2025-11-09T15:23:35.109Z", "publishedAt": "2025-11-09T15:23:35.134Z", "locale": "ru", "cover": { "id": 67, "documentId": "btnnr0srm8shbrpprc2n9fgr", "name": "oral-en.png", "alternativeText": null, "caption": null, "width": 3078, "height": 908, "formats": { "large": { "ext": ".png", "url": "/uploads/large_oral_en_04e6b5352b.png", "hash": "large_oral_en_04e6b5352b", "mime": "image/png", "name": "large_oral-en.png", "path": null, "size": 127.35, "width": 1000, "height": 295, "sizeInBytes": 127351 }, "small": { "ext": ".png", "url": "/uploads/small_oral_en_04e6b5352b.png", "hash": "small_oral_en_04e6b5352b", "mime": "image/png", "name": "small_oral-en.png", "path": null, "size": 41.18, "width": 500, "height": 147, "sizeInBytes": 41184 }, "medium": { "ext": ".png", "url": "/uploads/medium_oral_en_04e6b5352b.png", "hash": "medium_oral_en_04e6b5352b", "mime": "image/png", "name": "medium_oral-en.png", "path": null, "size": 79.3, "width": 750, "height": 221, "sizeInBytes": 79304 }, "thumbnail": { "ext": ".png", "url": "/uploads/thumbnail_oral_en_04e6b5352b.png", "hash": "thumbnail_oral_en_04e6b5352b", "mime": "image/png", "name": "thumbnail_oral-en.png", "path": null, "size": 14.28, "width": 245, "height": 72, "sizeInBytes": 14279 } }, "hash": "oral_en_04e6b5352b", "ext": ".png", "mime": "image/png", "size": 254.39, "url": "/uploads/oral_en_04e6b5352b.png", "previewUrl": null, "provider": "local", "provider_metadata": null, "createdAt": "2025-11-09T15:17:30.865Z", "updatedAt": "2025-11-09T15:17:30.865Z", "publishedAt": "2025-11-09T15:17:30.867Z" }, "localizations": [ { "id": 18, "documentId": "e3v9lwlnqzodz23wyzatt5t2", "slug": "muendliche-ueberlieferung", "title": "Mündliche Überlieferung", "link": "https://www.youtube.com/watch?v=XDivoFPNs80&list=PLRVpD1oy68rc4HISAx4h2AOC57gLck_vC", "createdAt": "2025-11-09T15:22:42.816Z", "updatedAt": "2025-11-09T15:22:42.816Z", "publishedAt": "2025-11-09T15:22:42.844Z", "locale": "de" }, { "id": 19, "documentId": "e3v9lwlnqzodz23wyzatt5t2", "slug": "oral-history", "title": "Oral history", "link": "https://www.youtube.com/watch?v=XDivoFPNs80&list=PLRVpD1oy68rc4HISAx4h2AOC57gLck_vC", "createdAt": "2025-11-09T15:22:05.245Z", "updatedAt": "2025-11-09T15:23:03.085Z", "publishedAt": "2025-11-09T15:23:03.127Z", "locale": "en" } ] }, { "id": 23, "documentId": "enn4nqdz2k7av6v1yjb1brx6", "slug": "nemczy-v-nevole", "title": "Немцы в неволе", "link": "https://pmem-europa.de/in-captivity", "createdAt": "2025-11-09T15:25:00.912Z", "updatedAt": "2025-11-09T15:25:00.912Z", "publishedAt": "2025-11-09T15:25:00.938Z", "locale": "ru", "cover": { "id": 69, "documentId": "qvzh11zhnq66jm97uztftmue", "name": "captivity-ru.png", "alternativeText": null, "caption": null, "width": 3304, "height": 890, "formats": { "large": { "ext": ".png", "url": "/uploads/large_captivity_ru_55f20e2564.png", "hash": "large_captivity_ru_55f20e2564", "mime": "image/png", "name": "large_captivity-ru.png", "path": null, "size": 153.51, "width": 1000, "height": 269, "sizeInBytes": 153506 }, "small": { "ext": ".png", "url": "/uploads/small_captivity_ru_55f20e2564.png", "hash": "small_captivity_ru_55f20e2564", "mime": "image/png", "name": "small_captivity-ru.png", "path": null, "size": 49.5, "width": 500, "height": 135, "sizeInBytes": 49497 }, "medium": { "ext": ".png", "url": "/uploads/medium_captivity_ru_55f20e2564.png", "hash": "medium_captivity_ru_55f20e2564", "mime": "image/png", "name": "medium_captivity-ru.png", "path": null, "size": 96.09, "width": 750, "height": 202, "sizeInBytes": 96089 }, "thumbnail": { "ext": ".png", "url": "/uploads/thumbnail_captivity_ru_55f20e2564.png", "hash": "thumbnail_captivity_ru_55f20e2564", "mime": "image/png", "name": "thumbnail_captivity-ru.png", "path": null, "size": 17.07, "width": 245, "height": 66, "sizeInBytes": 17067 } }, "hash": "captivity_ru_55f20e2564", "ext": ".png", "mime": "image/png", "size": 278.51, "url": "/uploads/captivity_ru_55f20e2564.png", "previewUrl": null, "provider": "local", "provider_metadata": null, "createdAt": "2025-11-09T15:17:31.574Z", "updatedAt": "2025-11-09T15:17:31.574Z", "publishedAt": "2025-11-09T15:17:31.575Z" }, "localizations": [ { "id": 25, "documentId": "enn4nqdz2k7av6v1yjb1brx6", "slug": "germans-in-captivity", "title": "Germans in captivity", "link": "https://pmem-europa.de/in-captivity", "createdAt": "2025-11-09T15:25:47.479Z", "updatedAt": "2025-11-09T15:25:47.479Z", "publishedAt": "2025-11-09T15:25:47.502Z", "locale": "en" }, { "id": 27, "documentId": "enn4nqdz2k7av6v1yjb1brx6", "slug": "deutsche-unter-freiheitsentzug", "title": "Deutsche unter Freiheitsentzug", "link": "https://pmem-europa.de/in-captivity", "createdAt": "2025-11-09T15:26:24.241Z", "updatedAt": "2025-11-09T15:26:24.241Z", "publishedAt": "2025-11-09T15:26:24.260Z", "locale": "de" } ] } ], "meta": { "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 3 } } }
+  {
+    "data": [
+      {
+        "id": 12,
+        "documentId": "tjdz4x6duyi8zq0ka8pc31wm",
+        "slug": "karta-gula-ga-v-prikame",
+        "title": "Карта ГУЛАГа в Прикамье",
+        "link": "https://map.pmem-europa.de",
+        "createdAt": "2025-11-09T15:18:04.312Z",
+        "updatedAt": "2025-11-09T15:20:51.435Z",
+        "publishedAt": "2025-11-09T15:20:51.463Z",
+        "locale": "ru",
+        "cover": {
+          "id": 71,
+          "documentId": "hsyagawup1h185hzlmuiydgc",
+          "name": "map-ru.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 3856,
+          "height": 1078,
+          "formats": {
+            "large": {
+              "ext": ".png",
+              "url": "/uploads/large_map_ru_1275d861a1.png",
+              "hash": "large_map_ru_1275d861a1",
+              "mime": "image/png",
+              "name": "large_map-ru.png",
+              "path": null,
+              "size": 168.88,
+              "width": 1000,
+              "height": 280,
+              "sizeInBytes": 168876
+            },
+            "small": {
+              "ext": ".png",
+              "url": "/uploads/small_map_ru_1275d861a1.png",
+              "hash": "small_map_ru_1275d861a1",
+              "mime": "image/png",
+              "name": "small_map-ru.png",
+              "path": null,
+              "size": 59.55,
+              "width": 500,
+              "height": 140,
+              "sizeInBytes": 59545
+            },
+            "medium": {
+              "ext": ".png",
+              "url": "/uploads/medium_map_ru_1275d861a1.png",
+              "hash": "medium_map_ru_1275d861a1",
+              "mime": "image/png",
+              "name": "medium_map-ru.png",
+              "path": null,
+              "size": 110.4,
+              "width": 750,
+              "height": 210,
+              "sizeInBytes": 110402
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "/uploads/thumbnail_map_ru_1275d861a1.png",
+              "hash": "thumbnail_map_ru_1275d861a1",
+              "mime": "image/png",
+              "name": "thumbnail_map-ru.png",
+              "path": null,
+              "size": 21.09,
+              "width": 245,
+              "height": 68,
+              "sizeInBytes": 21091
+            }
+          },
+          "hash": "map_ru_1275d861a1",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 404.99,
+          "url": "/uploads/map_ru_1275d861a1.png",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null,
+          "createdAt": "2025-11-09T15:17:32.749Z",
+          "updatedAt": "2025-11-09T15:17:32.749Z",
+          "publishedAt": "2025-11-09T15:17:32.750Z"
+        },
+        "localizations": [
+          {
+            "id": 13,
+            "documentId": "tjdz4x6duyi8zq0ka8pc31wm",
+            "slug": "gulag-map-of-the-kama-region",
+            "title": "GULAG-Map of the Kama Region",
+            "link": "https://map.pmem-europa.de",
+            "createdAt": "2025-11-09T15:19:35.455Z",
+            "updatedAt": "2025-11-09T15:21:02.580Z",
+            "publishedAt": "2025-11-09T15:21:02.645Z",
+            "locale": "en"
+          },
+          {
+            "id": 14,
+            "documentId": "tjdz4x6duyi8zq0ka8pc31wm",
+            "slug": "gulag-karte-des-kama-gebiets",
+            "title": "GULAG-Karte des Kama-Gebiets",
+            "link": "https://map.pmem-europa.de",
+            "createdAt": "2025-11-09T15:18:20.298Z",
+            "updatedAt": "2025-11-09T15:21:17.944Z",
+            "publishedAt": "2025-11-09T15:21:17.966Z",
+            "locale": "de"
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "documentId": "e3v9lwlnqzodz23wyzatt5t2",
+        "slug": "ustnaya-istoriya",
+        "title": "Устная история",
+        "link": "https://www.youtube.com/watch?v=XDivoFPNs80&list=PLRVpD1oy68rc4HISAx4h2AOC57gLck_vC",
+        "createdAt": "2025-11-09T15:23:35.109Z",
+        "updatedAt": "2025-11-09T15:23:35.109Z",
+        "publishedAt": "2025-11-09T15:23:35.134Z",
+        "locale": "ru",
+        "cover": {
+          "id": 67,
+          "documentId": "btnnr0srm8shbrpprc2n9fgr",
+          "name": "oral-en.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 3078,
+          "height": 908,
+          "formats": {
+            "large": {
+              "ext": ".png",
+              "url": "/uploads/large_oral_en_04e6b5352b.png",
+              "hash": "large_oral_en_04e6b5352b",
+              "mime": "image/png",
+              "name": "large_oral-en.png",
+              "path": null,
+              "size": 127.35,
+              "width": 1000,
+              "height": 295,
+              "sizeInBytes": 127351
+            },
+            "small": {
+              "ext": ".png",
+              "url": "/uploads/small_oral_en_04e6b5352b.png",
+              "hash": "small_oral_en_04e6b5352b",
+              "mime": "image/png",
+              "name": "small_oral-en.png",
+              "path": null,
+              "size": 41.18,
+              "width": 500,
+              "height": 147,
+              "sizeInBytes": 41184
+            },
+            "medium": {
+              "ext": ".png",
+              "url": "/uploads/medium_oral_en_04e6b5352b.png",
+              "hash": "medium_oral_en_04e6b5352b",
+              "mime": "image/png",
+              "name": "medium_oral-en.png",
+              "path": null,
+              "size": 79.3,
+              "width": 750,
+              "height": 221,
+              "sizeInBytes": 79304
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "/uploads/thumbnail_oral_en_04e6b5352b.png",
+              "hash": "thumbnail_oral_en_04e6b5352b",
+              "mime": "image/png",
+              "name": "thumbnail_oral-en.png",
+              "path": null,
+              "size": 14.28,
+              "width": 245,
+              "height": 72,
+              "sizeInBytes": 14279
+            }
+          },
+          "hash": "oral_en_04e6b5352b",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 254.39,
+          "url": "/uploads/oral_en_04e6b5352b.png",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null,
+          "createdAt": "2025-11-09T15:17:30.865Z",
+          "updatedAt": "2025-11-09T15:17:30.865Z",
+          "publishedAt": "2025-11-09T15:17:30.867Z"
+        },
+        "localizations": [
+          {
+            "id": 18,
+            "documentId": "e3v9lwlnqzodz23wyzatt5t2",
+            "slug": "muendliche-ueberlieferung",
+            "title": "Mündliche Überlieferung",
+            "link": "https://www.youtube.com/watch?v=XDivoFPNs80&list=PLRVpD1oy68rc4HISAx4h2AOC57gLck_vC",
+            "createdAt": "2025-11-09T15:22:42.816Z",
+            "updatedAt": "2025-11-09T15:22:42.816Z",
+            "publishedAt": "2025-11-09T15:22:42.844Z",
+            "locale": "de"
+          },
+          {
+            "id": 19,
+            "documentId": "e3v9lwlnqzodz23wyzatt5t2",
+            "slug": "oral-history",
+            "title": "Oral history",
+            "link": "https://www.youtube.com/watch?v=XDivoFPNs80&list=PLRVpD1oy68rc4HISAx4h2AOC57gLck_vC",
+            "createdAt": "2025-11-09T15:22:05.245Z",
+            "updatedAt": "2025-11-09T15:23:03.085Z",
+            "publishedAt": "2025-11-09T15:23:03.127Z",
+            "locale": "en"
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "documentId": "enn4nqdz2k7av6v1yjb1brx6",
+        "slug": "nemczy-v-nevole",
+        "title": "Немцы в неволе",
+        "link": "https://pmem-europa.de/in-captivity",
+        "createdAt": "2025-11-09T15:25:00.912Z",
+        "updatedAt": "2025-11-09T15:25:00.912Z",
+        "publishedAt": "2025-11-09T15:25:00.938Z",
+        "locale": "ru",
+        "cover": {
+          "id": 69,
+          "documentId": "qvzh11zhnq66jm97uztftmue",
+          "name": "captivity-ru.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 3304,
+          "height": 890,
+          "formats": {
+            "large": {
+              "ext": ".png",
+              "url": "/uploads/large_captivity_ru_55f20e2564.png",
+              "hash": "large_captivity_ru_55f20e2564",
+              "mime": "image/png",
+              "name": "large_captivity-ru.png",
+              "path": null,
+              "size": 153.51,
+              "width": 1000,
+              "height": 269,
+              "sizeInBytes": 153506
+            },
+            "small": {
+              "ext": ".png",
+              "url": "/uploads/small_captivity_ru_55f20e2564.png",
+              "hash": "small_captivity_ru_55f20e2564",
+              "mime": "image/png",
+              "name": "small_captivity-ru.png",
+              "path": null,
+              "size": 49.5,
+              "width": 500,
+              "height": 135,
+              "sizeInBytes": 49497
+            },
+            "medium": {
+              "ext": ".png",
+              "url": "/uploads/medium_captivity_ru_55f20e2564.png",
+              "hash": "medium_captivity_ru_55f20e2564",
+              "mime": "image/png",
+              "name": "medium_captivity-ru.png",
+              "path": null,
+              "size": 96.09,
+              "width": 750,
+              "height": 202,
+              "sizeInBytes": 96089
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "/uploads/thumbnail_captivity_ru_55f20e2564.png",
+              "hash": "thumbnail_captivity_ru_55f20e2564",
+              "mime": "image/png",
+              "name": "thumbnail_captivity-ru.png",
+              "path": null,
+              "size": 17.07,
+              "width": 245,
+              "height": 66,
+              "sizeInBytes": 17067
+            }
+          },
+          "hash": "captivity_ru_55f20e2564",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 278.51,
+          "url": "/uploads/captivity_ru_55f20e2564.png",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null,
+          "createdAt": "2025-11-09T15:17:31.574Z",
+          "updatedAt": "2025-11-09T15:17:31.574Z",
+          "publishedAt": "2025-11-09T15:17:31.575Z"
+        },
+        "localizations": [
+          {
+            "id": 25,
+            "documentId": "enn4nqdz2k7av6v1yjb1brx6",
+            "slug": "germans-in-captivity",
+            "title": "Germans in captivity",
+            "link": "https://pmem-europa.de/in-captivity",
+            "createdAt": "2025-11-09T15:25:47.479Z",
+            "updatedAt": "2025-11-09T15:25:47.479Z",
+            "publishedAt": "2025-11-09T15:25:47.502Z",
+            "locale": "en"
+          },
+          {
+            "id": 27,
+            "documentId": "enn4nqdz2k7av6v1yjb1brx6",
+            "slug": "deutsche-unter-freiheitsentzug",
+            "title": "Deutsche unter Freiheitsentzug",
+            "link": "https://pmem-europa.de/in-captivity",
+            "createdAt": "2025-11-09T15:26:24.241Z",
+            "updatedAt": "2025-11-09T15:26:24.241Z",
+            "publishedAt": "2025-11-09T15:26:24.260Z",
+            "locale": "de"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 3 }
+    }
+  }
 ]

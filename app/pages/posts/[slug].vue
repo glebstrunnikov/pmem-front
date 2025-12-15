@@ -127,7 +127,7 @@
 
 <template>
   <!-- text-indigo text-brick text-jungle text-clay text-slate -->
-  <div v-if="data?.data.length" class="w-full pb-20 bg-background relative">
+  <div v-if="data?.data.length" class="w-full md:pb-20 bg-background relative">
     <div class="w-full my-6 text-body-m flex items-center">
       <div class="flex-1 text-left">{{ data.data?.[0]!.title }}</div>
       <div class="flex-1 text-center">{{ formattedDate }}</div>
@@ -139,7 +139,7 @@
       <div
         class="w-full flex justify-center items-center max-w-[60%] mb-5 z-10"
       ></div>
-      <div class="w-full md:w-[60%] mb-20 text-primary text-title-xl">
+      <div class="w-full md:w-[60%] md:mb-20 mb-6 text-primary text-title-xl">
         {{ data.data?.[0]!.title }}
       </div>
 
@@ -171,7 +171,10 @@
       </div>
       <PostTextArea :content="data.data?.[0]!.content" />
 
-      <div v-if="data.data?.[0]!.tags" class="w-full md:w-[60%] mt-20 mb-30">
+      <div
+        v-if="data.data?.[0]!.tags && data.data?.[0]!.tags.length"
+        class="w-full md:w-[60%] md:mt-20 mt-4 md:mb-30 mb-6"
+      >
         <div class="w-full h-[1px] bg-black mb-10"></div>
         <div class="flex flex-wrap gap-6">
           <div

@@ -45,10 +45,6 @@
     font-weight: 700;
     line-height: 1.4;
   }
-  .text-title-xl {
-    font-size: 32px;
-    font-weight: 700;
-  }
   .text-title-l {
     font-size: 24px;
     font-weight: 700;
@@ -76,6 +72,35 @@
   .text-body-xxs {
     font-size: 9.9px;
     font-weight: 600;
+  }
+
+  @media (max-width: 1080px) {
+    /* main title in posts */
+    .text-title-xxl {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    /* text in articles */
+    .text-title-l-thin {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .text-title-xl {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    /* post title on main page */
+    .text-title-l {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    /* shares, footer, "to project page" */
+    .text-title-m {
+      font-size: 18px;
+      font-weight: 600;
+    }
   }
 }
 

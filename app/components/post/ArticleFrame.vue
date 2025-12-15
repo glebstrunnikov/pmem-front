@@ -11,7 +11,7 @@
   ></div>
 
   <div
-    class="md:border md:border-[2px] rounded-4xl flex flex-col items-center pt-29 relative z-20 bg-background"
+    class="md:border md:border-[2px] rounded-4xl flex flex-col items-center md:pt-29 relative z-20 bg-background"
     :class="parentClass"
   >
     <slot></slot>

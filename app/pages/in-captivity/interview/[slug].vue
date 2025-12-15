@@ -69,13 +69,10 @@
 
   <div
     v-if="data?.data.length"
-    class="w-full pb-20 bg-background relative mt-18"
+    class="w-full md:pb-20 bg-background relative mt-6 md:mt-18"
   >
     <PostArticleFrame>
-      <div
-        class="w-full flex justify-center items-center max-w-[60%] mb-22 z-10"
-      ></div>
-      <div class="w-full md:w-[60%] mb-20 text-primary text-title-xl">
+      <div class="w-full md:w-[60%] md:mb-20 mb-6 text-primary text-title-xl">
         {{ data.data[0]?.title }}
       </div>
 

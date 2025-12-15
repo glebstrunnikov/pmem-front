@@ -5,7 +5,9 @@
 </script>
 
 <template>
-  <div class="w-full h-46 mt-29 border-t-[2px] py-20 md:p-20">
+  <div
+    class="w-full h-30 md:h-46 mt-10 md:mt-29 border-t-[2px] py-10 md:py-20 md:p-20"
+  >
     <div class="flex justify-start items-center gap-15 text-body-m">
       <div>{{ i18n.t("share") }}</div>
       <div>
