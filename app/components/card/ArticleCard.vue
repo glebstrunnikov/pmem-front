@@ -13,7 +13,7 @@
       title: "Post name",
       date: "2025-09-23T18:12:15.374Z",
       link: "",
-    }
+    },
   );
   const formattedDate = computed(() => {
     if (!props.date) return "";
@@ -32,6 +32,23 @@
     hoverTagOn.value = state;
   }
   const hoverOn = computed(() => hoverAreaOn.value && !hoverTagOn.value);
+  const titleElement = ref<HTMLElement | null>(null);
+  const dateElement = ref<HTMLElement | null>(null);
+  const tagsElement = ref<HTMLElement | null>(null);
+  const lines = computed(() => {
+    if (!titleElement.value || !dateElement.value) return 0;
+    const contentHeight = 83 * 0.8 * 4;
+    const titleHeight = titleElement.value.offsetHeight;
+    const dateHeight = dateElement.value.offsetHeight;
+    const tagsHeight = tagsElement.value ? tagsElement.value.offsetHeight : 0;
+    const remainingHeight =
+      contentHeight - titleHeight - dateHeight - tagsHeight;
+    return Math.floor(remainingHeight / 14.85) > 4
+      ? 4
+      : Math.floor(remainingHeight / 14.85) < 0
+        ? 0
+        : Math.floor(remainingHeight / 14.85);
+  });
 </script>
 
 <template>
@@ -58,15 +75,19 @@
         :class="hoverOn ? 'bg-contrast' : 'bg-background'"
       >
         <div class="flex flex-col items-start w-[70%] h-[80%] z-10">
-          <div class="text-title-l mb-3 w-full text-left">
+          <div class="text-title-l pb-3 w-full text-left" ref="titleElement">
             {{ title }}
           </div>
-          <div class="text-body-xxs text-primary mb-5 w-full text-left">
+          <div
+            class="text-body-xxs text-primary pb-3 w-full text-left"
+            ref="dateElement"
+          >
             {{ formattedDate }}
           </div>
           <div
-            v-if="description"
-            class="text-body-xxs line-clamp-4 mb-3 w-full text-left"
+            v-if="description && lines > 0"
+            class="text-body-xxs w-full text-left overflow-hidden"
+            :style="`display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: ${lines}`"
           >
             {{ description }}
           </div>

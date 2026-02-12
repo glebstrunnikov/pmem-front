@@ -160,6 +160,7 @@ declare global {
     publishedAt: string;
     locale: string;
     slug: string;
+    mainDate: string;
   }
 
   /**
@@ -175,6 +176,7 @@ declare global {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
+    mainDate: string;
     locale: string;
     slug: string;
     cover: StrapiMedia | null;

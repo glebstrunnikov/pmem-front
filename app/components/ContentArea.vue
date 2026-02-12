@@ -14,7 +14,7 @@
     {
       contentClass:
         "grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-14 pt-16 bg-background mb-25",
-    }
+    },
   );
   const query = computed(() => {
     return route.query.query as string;
@@ -23,9 +23,9 @@
   const sort = computed(() => {
     const currentSort = route.query.sort;
     if (currentSort === "new" || !currentSort) {
-      return "publishedAt:desc";
+      return "mainDate:desc";
     } else {
-      return "publishedAt:asc";
+      return "mainDate:asc";
     }
   });
 
@@ -47,7 +47,7 @@
     {
       baseURL: config.public.apiBase,
       watch: [page, locale, query, sort],
-    }
+    },
   );
   const allPosts = computed(() => {
     if (page.value === 1) {
@@ -75,7 +75,7 @@
         showPagnator.value = true;
       }
     },
-    { immediate: true }
+    { immediate: true },
   );
   useHead({
     meta: [
@@ -128,7 +128,7 @@
         :title="post.title"
         :description="post.subtitle"
         :imageUrl="imageUrl(post)"
-        :date="post.publishedAt"
+        :date="post.mainDate"
         :link="'/posts/' + post.slug"
         :tags="post.tags"
       />
